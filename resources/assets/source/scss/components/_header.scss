@@ -1,0 +1,98 @@
+$width:100%;
+
+
+.navbar-left{
+  float:left;
+}
+.login-form {
+    margin-top: 10%;
+}
+
+#page-index {
+	width: $width;
+  margin: 0;
+}
+
+.input-field {
+  width: $width;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.button {
+  width: $width;
+  height: 30px;
+}
+
+.dropdown-menu{
+  width:$width;
+}
+
+/*Homepage*/
+
+.content-holder{
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.week-selector{
+  margin: 0 5px 10px 5px;
+}
+
+.item-project-bar{
+  width:$width;
+  background-color: #f6b26b;
+  box-shadow: inset 0px 0px 5px 0px #ce9457;
+    a {
+        color:#000000;
+        margin-left: 5px;
+  }
+}
+
+.item-day-bar{
+  width: $width;
+  box-shadow: inset 0px 0px 5px 0px #6e925e;
+  background-color: #93c47d;
+}
+
+.item-user-bar{
+  width: $width;
+  background-color: #6fa8dc;
+  box-shadow: inset 0px 0px 5px 0px #537ea5;
+}
+
+.list-of-users {
+  width: $width;
+  background-color: #6fa8dc;
+  display:none;
+}
+
+.entry--image {
+  img{
+    margin: 5px 0px 0px 5px;
+  }
+  p{
+    margin-bottom: 0px;
+  }
+}
+
+/*Search page*/
+.item-search-project{
+
+      &.is-inactive {
+      display: none;
+    }   
+    &.is-active {
+      display: block;
+    }
+}
+
+/*Add project*/
+.extern-location{
+  display:none;
+}
+
+.end-date{
+  margin-bottom: 10px;
+}
