@@ -29,7 +29,7 @@ class SearchController extends Controller
 
         $users = User::find($firstname);
         
-        return view('layouts.usersearch', compact( user));
+        return view('homepage', $user);
     }
 
     /**

@@ -16,16 +16,7 @@
 
 Route::get('register', 'UsersController@create');
 Route::get('applypassword', 'UsersController@applypassword');
-Route::get('edituser/{id}', 'UsersController@index');
-Route::post('edituser/{id}', 'UsersController@edit');
-
 // Route::resource('users', 'UsersController');
-
-//homepage routes
-Route::get('homepage', 'Homepagecontroller@index');
-Route::get('search', 'Homepagecontroller@search');
-
-
 
 // Authentication routes
 Route::get('/', 'Auth\AuthController@getLogin');
@@ -36,9 +27,23 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
-//Project routes
-Route::get('addproject', 'ProjectController@create');
-Route::post('addproject/store', 'ProjectController@store');
 
-//Search routes
-Route::get('search/user', 'SearchController@finduserbyname');
+
+
+Route::group(["middleware" => "auth"], function() {
+	//Project routes
+	Route::get('addproject', 'ProjectController@create');
+	Route::post('addproject/store', 'ProjectController@store');
+	Route::get('editproject/{id}', 'ProjectController@index');
+	Route::post('editproject/{id}', 'ProjectController@edit');
+
+	//Search routes
+	Route::get('search/user', 'SearchController@finduserbyname');
+
+	//homepage routes
+	Route::get('homepage', 'Homepagecontroller@index');
+	Route::get('search', 'Homepagecontroller@search');
+
+	Route::get('edituser/{id}', 'UsersController@index');
+	Route::post('edituser/{id}', 'UsersController@edit');
+});

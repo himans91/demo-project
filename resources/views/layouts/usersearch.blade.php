@@ -6,9 +6,11 @@
          </a>
       </div>
       <div class="media-body entry--info">
-         <p class="media-heading">Himanshu</p>
-         <p class="media-heading">0632386556</p>
-         <p class="media-heading">Amsterdam</p>
+
+            <p class="media-heading"></p>
+            <p class="media-heading">}</p>
+            <p class="media-heading"></p>
+
       </div>
    </div><!--End of user-->
 </div><!--End of user-list-->

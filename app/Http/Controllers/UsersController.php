@@ -30,6 +30,7 @@ class UsersController extends Controller
        // dd("dsad");
         $user = User::findOrFail($id); 
         $user->update($request->all());
+
         return view('homepage');
 
     }    

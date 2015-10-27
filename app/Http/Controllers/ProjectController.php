@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Project;
-//use Illuminate\Http\Request;
-use App\Http\Requests;
+use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
-use App\Http\Request\CreateTaskRequest;
+ use App\Http\Requests;
+use Illuminate\Http\Request;
 use Carbon\Carbon;
-use Request;
+use App\Project;
+//use Request;
+
 
 class ProjectController extends Controller
 {
@@ -18,12 +19,28 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+        public function index($id)
     {
-        //$projects = Project::all();
-        //return $projects;
-        return view('addproject');
+
+        //("ds");
+        $project = Project::findOrFail($id); 
+        // $user->firstname = "test";
+        // $user->save();
+
+        return view('editproject', $project);
+       
     }
+
+
+    public function edit($id, Request $request)
+    {
+       // dd("dsad");
+        $project = Project::findOrFail($id); 
+        $project->update($request->all());
+
+        return view('homepage');
+
+    }  
 
     /**
      * Show the form for creating a new resource.
@@ -70,16 +87,7 @@ class ProjectController extends Controller
     protected function create()
     {
         return view('addproject');
-      //  $input = Request::all();
 
-       // return view('addproject');
-     /*return Project::create([
-            'title' => $data['title'],
-            'tel' => $data['tel'],
-            'street' => $data['street'],
-            //'password' => bcrypt($data['password']),
-           // 'tel' => $data['tel'],
-        ]);*/
     }
 
     
