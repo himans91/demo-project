@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
-use App\Project;
-use DB;
-use Input;
 
-class SearchController extends Controller
+class AssignUsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,45 +16,22 @@ class SearchController extends Controller
      */
     public function index()
     {
-        // $users= DB::table('users')->get()
-        // dd($users);
-        // return view('layouts.usersearch', compact('users'));
-
-    }
-    public function findbyfirstname(){
-       //  $firstname = Input::get('firstname');
-       //  $user = User::whereFirstname($firstname)->first(); 
-       
-       // dd($user);
-     
+        $users = User::all();
         
-        //return view('layouts.usersearch', compact( $user));
+         //dd($users);
+       // $data = array('users' => $users);
+        return view('assignusers', compact('users'));
     }
-   
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function show()
-    {   
-        $firstname = Input::get('firstname');
-        $users = User::where('firstname', 'LIKE', '%' . $firstname . '%')->get();     
-        $users = User::where('surname', 'LIKE', '%' . $firstname . '%')->get();
-        $data = array('users' => $users);
-        return view('userresult', $data);
+    public function create()
+    {
+        //
     }
-
-    // public function display()
-    // {
-    //     $title = Input::get('title');
-    //     $projects = Project::where('title', 'LIKE', '%' . $title . '%')->get();     
-    //     $data1 = array('projects' => $projects);
-    //     return view('layouts.projectsearch', $data1);
-    // }
-
-
-  
 
     /**
      * Store a newly created resource in storage.
@@ -70,6 +44,16 @@ class SearchController extends Controller
         //
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
 
     /**
      * Show the form for editing the specified resource.

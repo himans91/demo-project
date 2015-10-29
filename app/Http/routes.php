@@ -28,22 +28,41 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
-
-
 Route::group(["middleware" => "auth"], function() {
-	//Project routes
+	/*-----------------------------------------------------------------------
+		Project routes
+	-----------------------------------------------------------------------*/
 	Route::get('addproject', 'ProjectController@create');
 	Route::post('addproject/store', 'ProjectController@store');
 	Route::get('editproject/{id}', 'ProjectController@index');
 	Route::post('editproject/{id}', 'ProjectController@edit');
+	Route::post('projectsearch', 'ProjectController@show');
+	
+	/*-----------------------------------------------------------------------
+		AsignUser routes
+	-----------------------------------------------------------------------*/
 
-	//Search routes
-	Route::get('search/user', 'SearchController@finduserbyname');
+	Route::get('assignusers', 'AssignUsersController@index');
+	/*-----------------------------------------------------------------------
+		Search routes
+	-----------------------------------------------------------------------*/
+	Route::post('search', 'SearchController@show');
+	//Route::post('search', 'SearchController@display');
+	//Route::get('search/user', 'SearchController@findbyfirstname');
+	//Route::get('/search',['uses' => 'SearchController@getSearch','as' => 'search']);
 
-	//homepage routes
+	/*-----------------------------------------------------------------------
+		Homepage routes
+	-----------------------------------------------------------------------*/
+
 	Route::get('homepage', 'Homepagecontroller@index');
 	Route::get('search', 'Homepagecontroller@search');
+	Route::get('projectsearch', 'Homepagecontroller@projectsearch');
 
+	/*-----------------------------------------------------------------------
+		User routes
+	-----------------------------------------------------------------------*/
+	
 	Route::get('edituser/{id}', 'UsersController@index');
 	Route::post('edituser/{id}', 'UsersController@edit');
 });

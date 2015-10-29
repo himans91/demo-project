@@ -29,8 +29,12 @@
 			  	<li><a href="{{ url('addproject') }}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add project
 			  		</a>
 			  	</li>
-			  	<li><a href="{{ url('search') }}"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search
-			  		</a>
+			  	<li class="dropdown">
+			  		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search <span class="caret"></span></a>
+			  		<ul class="dropdown-menu">
+			            <li><a href="{{ url('search') }}">Users</a></li>
+			            <li><a href="{{ url('projectsearch') }}">Project</a></li>
+	          		</ul>
 			  	</li>
 			  	<li><a href="{{ url('/admin') }}"><span class="glyphicon glyphicon-off" aria-hidden="true">	</span> Logout
 			  		</a>

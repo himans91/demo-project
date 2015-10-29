@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
- use App\Http\Requests;
-use Illuminate\Http\Request;
+use App\Http\Requests;
+//use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Project;
-//use Request;
+use Input;
+// use Request;
 
 
 class ProjectController extends Controller
@@ -42,6 +43,14 @@ class ProjectController extends Controller
 
     }  
 
+        public function show()
+    {
+        $title = Input::get('title');
+        $projects = Project::where('title', 'LIKE', '%' . $title . '%')->get();     
+        $data = array('projects' => $projects);
+        return view('projectresult', $data);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -62,7 +71,6 @@ class ProjectController extends Controller
     public function store()
     {
     
-        
         $input = Request::all();
 
         $project = new Project;

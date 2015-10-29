@@ -35,10 +35,12 @@ class UsersController extends Controller
 
     }    
 
-    // public function update($id, Request $request)
-    // {
+        public function show(){
+        
+       // $user=User::finda
+       
 
-    // }
+    }
 
 
 
@@ -49,41 +51,7 @@ class UsersController extends Controller
     }
 
 
-     /**
-     * Show the form for creating a new resource
-     * GET /users/{id}
-     *
-     * @param int $id
-     * @return Response
-     */
 
-    // public function requestpassword()
-    // {
-    //     return view('requestpassword');
-    // }
-
-        /**
-     * Show the form for creating a new resource
-     * GET /users/{id}/edit
-     *  
-     * @param int $id
-     * @return Response
-     */
-
-    
-    /**
-    *Store a newly created resource in storage
-    *POST /users
-    *@return Response
-    */
-
-    public function show(){
-        
-       // $user = user::find('firstname');
-
-       // return view('users.show', compact('user'));
-
-    }
 
    
     /**
