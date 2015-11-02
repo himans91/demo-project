@@ -12,13 +12,13 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;*/
 
 class Project extends Model {
 
-
+    
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'project';
+    protected $table = 'projects';
 
     /**
      * The attributes that are mass assignable.
@@ -33,4 +33,14 @@ class Project extends Model {
      * @var array
      */
 
+    /* 
+       Get the users associated with the projects
+    */
+
+    public function users()
+    {
+        return $this->belongsToMany('App\User')->withTimestamps();
+    }
+
 }
+

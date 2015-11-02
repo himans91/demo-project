@@ -43,7 +43,7 @@ class SearchController extends Controller
     {   
         $firstname = Input::get('firstname');
         $users = User::where('firstname', 'LIKE', '%' . $firstname . '%')->get();     
-        $users = User::where('surname', 'LIKE', '%' . $firstname . '%')->get();
+        //$users = User::where('surname', 'LIKE', '%' . $firstname . '%')->get();
         $data = array('users' => $users);
         return view('userresult', $data);
     }

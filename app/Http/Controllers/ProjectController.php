@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
+//use App\Http\Requests;
 //use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Project;
 use Input;
-// use Request;
+use Request;
 
 
 class ProjectController extends Controller

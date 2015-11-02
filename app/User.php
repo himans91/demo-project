@@ -36,4 +36,15 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];// attributen die niet zichtbaar zijn
+
+
+    /* 
+        Get the projects associated with the user
+    */
+    public function projects()
+    {
+        return $this->belongsToMany('App\Project');
+    }
 }
+
+
