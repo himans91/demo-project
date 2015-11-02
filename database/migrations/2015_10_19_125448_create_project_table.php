@@ -16,8 +16,7 @@ class CreateProjectTable extends Migration
             $table->increments('id')->unique();
             $table->string('title');
             $table->string('telephone');
-            $table->String('location');
-            $table->boolean('extern');
+            $table->Boolean('location');
             $table->string('street');
             $table->string('zippcode');
             $table->string('city');

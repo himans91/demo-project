@@ -26,8 +26,8 @@
                     <input class="input-field" name="telephone" type="text" id="tel" placeholder="Telephone">
                     <label for="street">Locatie</label>
                     <select  class="form-control select-intern-extern" id="selection"> 
-                      <option value="intern" name="intern">Intern</option>
-                      <option value="extern" name="extern">Extern</option>
+                      <option value="intern" name="0">Intern</option>
+                      <option value="extern" name="1">Extern</option>
                     </select>
                     <div class="extern-location">
                       <label for="street">Street</label>
@@ -35,11 +35,11 @@
                       <label for="Zipp-code">Zipp code</label>
                       <input class="input-field" name="zippcode" type="" id="zippcode" placeholder="Zipp code">
                       <label for="tel">City</label>
-                      <input  class="input-field" name="city" type="text" id="City" placeholder="City">
+                      <input  class="input-field" name="city" type="text" id="city" placeholder="City">
                     </div>
                     <label for="startdate">Start date</label>
-                    <div class='input-group date' id='datetimepicker2'>
-                      <input   type='date' class="form-control" />
+                    <div class='input-group date'  id='datetimepicker2'>
+                      <input type="date"  class="form-control" />
                       <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar"></span>
                       </span>
