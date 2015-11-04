@@ -16,11 +16,11 @@
                 <label for="firstname">firstname</label>
                 <input class="input-field" name="firstname" value="{{ $firstname }}" type="text" id="firstname" placeholder="firstname">
                 <label for="surname">surname</label>
-                <input class="input-field" name="surname" value="{{ $surname }}" type="text" id="tel" placeholder="Telephone">
+                <input class="input-field" name="surname" value="{{ $surname }}" type="text" id="tel" placeholder="Surname">
                 <label for="tel">tel</label>
                 <input class="input-field" name="tel" value="{{ $tel }}" type="text" id="tel" placeholder="Telephone">
-                 <label for="tel">User-role</label>
-                <input class="input-field" name="tel" value="{{ $userrole }}" type="text" id="userrole" readonly>
+                <label for="tel">User-role</label>
+                <input class="input-field" name="userrole" value="{{ $userrole }}" type="text" id="userrole" readonly>
                 <button id="submit"  class="btn btn-primary button" type="submit">Save </button>
             </form>   
         </div><!--end of registration-form-->
