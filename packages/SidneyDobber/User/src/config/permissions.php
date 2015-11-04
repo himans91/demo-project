@@ -12,7 +12,7 @@ return array(
 	*/
 
 	'user' => array(
-		0, 1, 2
+		0, 1
 	),
 
 	/*
@@ -25,7 +25,7 @@ return array(
 	*/
 
 	'users' => array(
-		0, 1, 2
+		0, 1
 	),
 
 	/*

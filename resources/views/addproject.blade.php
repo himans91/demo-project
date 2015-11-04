@@ -38,15 +38,15 @@
                       <input  class="input-field" name="city" type="text" id="city" placeholder="City">
                     </div>
                     <label for="startdate">Start date</label>
-                    <div class='input-group date'  id='datetimepicker2'>
-                      <input type="date"  class="form-control" />
+                    <div class="input-group date"  id='datetimepicker'>
+                      <input type="date" name="startdate" class="form-control" />
                       <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar"></span>
                       </span>
                     </div>
                     <label for="enddate">End date</label>
-                    <div class='input-group  end-date' id='datetimepicker2'>
-                      <input  type='date' class="form-control" />
+                    <div class="input-group  end-date" id="datetimepicker">
+                      <input  type="date" name="enddate" class="form-control" />
                       <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar"></span>
                       </span>
