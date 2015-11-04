@@ -562,8 +562,11 @@ body {
   margin: 0 auto;
   padding: 0 1em; }
 
-.navbar-left {
-  float: left; }
+body {
+  background-color: #E5E5E5; }
+
+.navbar-header {
+  box-shadow: 0 0 20px 0; }
 
 .login-form {
   margin-top: 10%; }
@@ -590,6 +593,9 @@ body {
   left: 0;
   right: 0; }
 
+.homepagebanner {
+  width: 100%; }
+
 .week-selector {
   margin: 0 5px 10px 5px; }
 
@@ -613,8 +619,9 @@ body {
 
 .list-of-users {
   width: 100%;
-  background-color: #6fa8dc;
-  display: none; }
+  box-shadow: 0px 3px 8px 0px;
+  background: -webkit-radial-gradient(center, ellipse cover, #95badb 48%, #6fa8dc 98%);
+  background: radial-gradient(ellipse cover at center, #95badb 48%, #6fa8dc 98%); }
 
 .entry--image img {
   margin: 5px 0px 0px 5px; }
@@ -627,12 +634,36 @@ body {
 .item-search-project.is-active {
   display: block; }
 
+/*Project-search result*/
+.list-of-projects {
+  width: 100%;
+  background: -webkit-radial-gradient(center, ellipse cover, #f6b26b 50%, #f4a250 100%);
+  background: radial-gradient(ellipse cover at center, #f6b26b 50%, #f4a250 100%);
+  box-shadow: 0px 3px 8px 0px; }
+  .list-of-projects a {
+    color: #000000; }
+
 /*Add project*/
 .extern-location {
   display: none; }
 
 .end-date {
   margin-bottom: 10px; }
+
+/*Assign members*/
+.assign-members {
+  box-shadow: inset 0px 0px 5px 0px #1288FF;
+  border-radius: 80px;
+  float: left;
+  width: 150px;
+  margin: 10px 0  0 10px;
+  background: -webkit-radial-gradient(center, ellipse cover, #95badb 48%, #6fa8dc 98%);
+  background: radial-gradient(ellipse cover at center, #95badb 48%, #6fa8dc 98%); }
+
+.member--details {
+  padding: 30px; }
+  .member--details p {
+    margin: 0px; }
 
 .footer {
   font-size: 0.8em;

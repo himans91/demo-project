@@ -36,3 +36,7 @@ $(function(){
             $('#zippcode').val("1114 AB");
             $('#city').val("Amsterdam");
 });
+
+
+setTimeout(function() { 
+    $('.flashmessages').hide(); }, 3000);

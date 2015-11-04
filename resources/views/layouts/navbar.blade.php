@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default ">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -36,8 +36,9 @@
 			            <li><a href="{{ url('projectsearch') }}">Project</a></li>
 	          		</ul>
 			  	</li>
-			  	<li><a href="{{ url('/admin') }}"><span class="glyphicon glyphicon-off" aria-hidden="true">	</span> Logout
-			  		</a>
+			  	<li> @if (Auth::check())
+                    <a href="/logout"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> logout </a> 
+                @endif
 			  	</li>
 			</ul>
 		</div><!--/.nav-collapse -->

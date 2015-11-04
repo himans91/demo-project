@@ -534,20 +534,22 @@ body {
   padding: 0 1em; }
 
 #page {
-  width: 960px;
+  width: 100%;
   margin: 0 auto; }
   #page:after {
     content: "";
     display: table;
     clear: both; }
 
-#page_content:after {
-  content: "";
-  display: table;
-  clear: both; }
+#page_content {
+  padding: 10px; }
+  #page_content:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 #main {
-  width: 780px;
+  width: 100%;
   float: left; }
   #main:after {
     content: "";
@@ -558,6 +560,43 @@ body {
   width: 180px;
   float: left; }
   #sidebar:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/*              *
+* Dasboard page *
+*/
+#dashboard {
+  width: 100%;
+  padding: 0px; }
+
+.dashboard-head {
+  position: absolute;
+  width: 100%;
+  background-color: #f1f1f1;
+  height: 70px; }
+  .dashboard-head:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.dashboard-news {
+  top: 50px;
+  width: 100%;
+  background-color: #ffea00;
+  height: 125px; }
+  .dashboard-news:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.dashboard-case {
+  top: 50px;
+  width: 100%;
+  height: 125px;
+  background-color: #39ad43; }
+  .dashboard-case:after {
     content: "";
     display: table;
     clear: both; }
@@ -586,21 +625,6 @@ h6 {
 
 .bold {
   font-weight: bold; }
-
-.modal {
-  left: 50%;
-  top: 50%;
-  position: fixed; }
-
-.modal-small {
-  width: 400px;
-  margin-left: -200px;
-  margin-top: -200px; }
-
-.modal--form {
-  background-color: #fff;
-  padding: 24px;
-  width: 100%; }
 
 .form_item {
   margin-bottom: 12px; }
@@ -641,13 +665,12 @@ select {
   vertical-align: middle; }
 
 .button {
+  width: 100%;
   font-size: 12px;
   color: #fff;
   text-align: center;
   text-transform: capitalize;
-  padding: 0 15px;
-  margin: 0 2px 0 2px;
-  height: 32px;
+  height: 30px;
   display: inline-block;
   border: none;
   background: #02a3e2; }
