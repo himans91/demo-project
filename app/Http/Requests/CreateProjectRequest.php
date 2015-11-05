@@ -24,7 +24,7 @@ class CreateProjectRequest extends Request
     public function rules()
     {
         return [
-             'title'=> 'required'| 'max:25'
+             'title'=> 'required', 'unique'| 'max:25'
              'telephone'=> 'required'| 'max:10'
              'street'=> 'required'
              'startdate'=> 'required|date'

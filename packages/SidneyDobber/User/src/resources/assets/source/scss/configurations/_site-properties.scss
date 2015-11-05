@@ -24,19 +24,53 @@ body {
 }
 #page {
     @include clearfix;
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
 }
 #page_content {
     @include clearfix;
+    padding: 10px;
 }
 #main {
     @include clearfix;
-    width: 780px;
+    width: 100%;
     float: left;
 }
 #sidebar {
     @include clearfix;
     width: 180px;
     float: left;
+}
+
+/*              *
+* Dasboard page *
+*/              
+
+#dashboard {
+    width: 100%;
+    padding: 0px;
+}
+
+.dashboard-head {  
+    @include clearfix;
+    position: absolute;
+    width: 100%;
+    background-color: #f1f1f1;
+    height: 70px
+}
+
+.dashboard-news{
+    @include clearfix;
+    top: 50px;
+    width: 100%;
+    background-color: #ffea00;
+    height: 125px;
+}
+
+.dashboard-case{
+    @include clearfix;
+    top: 50px;
+    width: 100%;
+    height: 125px;
+    background-color: #39ad43;
 }

@@ -31,6 +31,7 @@ class UsersController extends Controller
         $user = User::findOrFail($id); 
         $user->update($request->all());
 
+        session()->flash('flash_message', 'Your profile has been edited.');
         return view('homepage');
 
     }    

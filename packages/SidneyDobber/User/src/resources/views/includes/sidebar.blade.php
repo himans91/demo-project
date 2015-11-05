@@ -1,4 +1,4 @@
-@section("sidebar")
+{{-- @section("sidebar")
 
 <div id="sidebar">
     <div id="sidebar_content">
@@ -13,4 +13,4 @@
     </div>
 </div>
 
-@show
+@show --}}

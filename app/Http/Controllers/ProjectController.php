@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 //use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Project;
+use App\User;
 use Input;
 use Request;
 
@@ -33,6 +34,7 @@ class ProjectController extends Controller
     }
 
 
+
     public function edit($id, Request $request)
     {
        // dd("dsad");
@@ -49,7 +51,9 @@ class ProjectController extends Controller
         $projects = Project::where('title', 'LIKE', '%' . $title . '%')->get();     
         $data = array('projects' => $projects);
         return view('projectresult', $data);
+
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -80,6 +84,7 @@ class ProjectController extends Controller
         $input[''] = Carbon::now();
 
         Project::create($input);
+        session()->flash('flash_message', 'Your project has been created.');
 
         return redirect('homepage');
     }

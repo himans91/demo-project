@@ -28,6 +28,11 @@ class Homepagecontroller extends Controller
         //
     }
 
+    public function projectsearch()
+    {
+        return view('projectsearch');
+    }
+
     public function search()
     {
         return view('search');

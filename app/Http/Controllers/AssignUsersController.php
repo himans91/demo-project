@@ -18,8 +18,8 @@ class AssignUsersController extends Controller
     {
         $users = User::all();
         
-         //dd($users);
-       // $data = array('users' => $users);
+        //dd($users);
+        // $data = array('users' => $users);
         return view('assignusers', compact('users'));
     }
 
@@ -52,7 +52,8 @@ class AssignUsersController extends Controller
      */
     public function show($id)
     {
-        //
+        //$users = App\User::find();
+
     }
 
     /**

@@ -1,5 +1,4 @@
 @extends("user::masters.admin")
-
 @section("content")
 
 <h2>Add user</h2>

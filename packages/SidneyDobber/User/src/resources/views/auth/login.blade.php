@@ -36,7 +36,9 @@
         </div>
         <div class="button_wrapper clearfix">
             <div class="button_wrapper_content">
-                <input class="button" type="submit" value="login">
+           {{--  <input class="button" type="submit" value="login"> --}}
+                <button id="submit" class="btn btn-primary button" type="submit" >Login </button>
+                </form>   
             </div>
         </div>
     </form>
