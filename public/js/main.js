@@ -40,3 +40,12 @@ $(function(){
 
 setTimeout(function() { 
     $('.flashmessages').hide(); }, 3000);
+
+$(function(){
+        $('.all-users-list').hide();
+    $('.show-users-list').click(function(){
+        
+        $('.all-users-list').show();
+    });
+
+});

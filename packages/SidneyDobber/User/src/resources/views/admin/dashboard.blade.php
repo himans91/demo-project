@@ -6,7 +6,7 @@
 	<div id="dashboard">
 		<div class="dashboard-head">
 			<div class="dashboard-news">
-				<div class="new--projects">
+				<div class="news--projects">
 					<div class="new--users">
 					</div>
 				</div>

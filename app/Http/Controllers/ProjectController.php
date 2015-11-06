@@ -38,22 +38,38 @@ class ProjectController extends Controller
     public function edit($id, Request $request)
     {
        // dd("dsad");
-        $project = Project::findOrFail($id); 
+        $project = Project::findOrFail($id);    
         $project->update($request->all());
 
         return view('homepage');
 
     }  
 
-        public function show()
-    {
+    //Search for project
+    public function show()
+    {   
         $title = Input::get('title');
         $projects = Project::where('title', 'LIKE', '%' . $title . '%')->get();     
-        $data = array('projects' => $projects);
+        $data = array(
+            'projects' => $projects,
+            'users' => User::all()
+        );
         return view('projectresult', $data);
 
     }
 
+    // public function ShowUserList()
+    // {
+    //     $users = User::all();
+        
+    //     return view('projectresult', compact('users'));
+    // }
+
+    // public function ShowAssignedUsers()
+    // {
+    //     $users = User::lists('firstname')
+    //     return view('projectresult', copac$user);
+    // }
 
     /**
      * Show the form for creating a new resource.

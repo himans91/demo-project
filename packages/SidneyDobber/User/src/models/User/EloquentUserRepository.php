@@ -65,7 +65,7 @@ class EloquentUserRepository implements UserRepositoryInterface {
      */
     public function create() {
         $rules = array(
-            "username" => "required|min:6|unique:users,username",
+            //"username" => "required|min:6|unique:users,username",
             "email" => "required|email|unique:users,email", 
             "userrole" => "required"
         );
@@ -74,14 +74,15 @@ class EloquentUserRepository implements UserRepositoryInterface {
         // Store the new user if the email was send successfully.
         if($validated == true) {
             $user = new User;
-            $user->username = Input::get("username");
+           // $user->username = Input::get("username");
             $user->email = Input::get("email");
             $user->userrole = Input::get("userrole");
+            // $user->password = input::get("password");
             $user->password = Hash::make(str_random(10));
             $user->save();
             // Custom success messages.
             $this->successes = array(
-                "The new user <a href=\"/admin/users/" . $user->id . "\"/>" . $user->username . "</a> has been succesfully created."
+                "The new user <a href=\"/admin/users/" . $user->id . "\"/>" . $user->email . "</a> has been succesfully created."
             );
             // Email attributes.
             $view = $this->emails_config['new_user'];
@@ -110,7 +111,7 @@ class EloquentUserRepository implements UserRepositoryInterface {
             $user->save();
             // Custom success messages.
             $this->successes = array(
-                "The user <a href=\"/admin/users/" . $user->id . "\">" . $user->username . "</a> has been succesfully updated."
+                "The user <a href=\"/admin/users/" . $user->id . "\">" . $user->email . "</a> has been succesfully updated."
             );
             return true;
         } else {

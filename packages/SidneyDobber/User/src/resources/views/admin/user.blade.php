@@ -17,8 +17,8 @@
 <form method="post">
     {!! csrf_field() !!}
     <div class="form_item">
-        <label for="username">Username <span>(Can not be changed)</span></label>
-        <input class="input-text" type="text" value="{{ $user->username }}" readonly="readonly" disabled="disabled">
+        <label for="username">password <span>(Can not be changed)</span></label>
+        <input class="input-text" type="text" value="{{ $user->password }}" readonly="readonly" disabled="disabled">
     </div>
     <div class="form_item">
         <label for="email">Email</label>

@@ -11,16 +11,17 @@ class AssignUsersController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     *This method will show all the users within this webbapplication
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $users = User::all();
         
-        //dd($users);
+        dd($users);
         // $data = array('users' => $users);
-        return view('assignusers', compact('users'));
+       // return view('projectresult', compact('users'));
     }
 
     /**
@@ -33,6 +34,8 @@ class AssignUsersController extends Controller
         //
     }
 
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -44,18 +47,23 @@ class AssignUsersController extends Controller
         //
     }
 
+     public function getAssignedUsers()
+     {
+
+       
+     }
+
+
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //$users = App\User::find();
 
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -66,6 +74,14 @@ class AssignUsersController extends Controller
     {
         //
     }
+
+    // public function ShowAssignedUsers()
+    // {
+        
+    //     $users = User::all();
+    //     $projects =Project::all();
+    //     return view('projectresult', ['users' ->$users, 'projects' ->$projects]);
+    // }
 
     /**
      * Update the specified resource in storage.

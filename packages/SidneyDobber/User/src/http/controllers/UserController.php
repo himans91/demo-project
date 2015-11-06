@@ -98,6 +98,8 @@ class UserController extends Controller {
             // Set the users email and user role so they are preset in the view.
             $user->email = Input::get("email");
             $user->userrole = Input::get("userrole");
+            $user->password = Input::get("password");
+        
             // If the input is valid update the user.
             if($this->userInstance->update($user)) {
                 // Set the status message and set the status to true.

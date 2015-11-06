@@ -37,12 +37,13 @@ Route::group(["middleware" => "auth"], function() {
 	Route::get('editproject/{id}', 'ProjectController@index');
 	Route::post('editproject/{id}', 'ProjectController@edit');
 	Route::post('projectsearch', 'ProjectController@show');
-	
+	// Route::get('projectsearch', 'ProjectController@ShowUserList');
 	/*-----------------------------------------------------------------------
 		AsignUser routes
 	-----------------------------------------------------------------------*/
 
 	Route::get('assignusers', 'AssignUsersController@index');
+
 	/*-----------------------------------------------------------------------
 		Search routes
 	-----------------------------------------------------------------------*/

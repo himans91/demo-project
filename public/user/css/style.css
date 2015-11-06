@@ -758,6 +758,15 @@ tr:hover .crud_wrapper {
 #header {
   border: 1px #ccc solid; }
 
+#navbar {
+  position: absolute;
+  z-index: 100;
+  background: #F9F9F9;
+  width: 100%; }
+
+.navbar-collapse {
+  overflow: visible; }
+
 #header_content {
   margin: 6px 24px;
   display: block; }
