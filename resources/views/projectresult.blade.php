@@ -24,24 +24,26 @@
                      <li><p class="media-heading"><strong>Telephone:</strong> {{$project->telephone}}</p></li>
                      <li><p class="media-heading"><strong>City:</strong> {{$project->city}}</p></li>
                      <a href="editproject/{id}"><span class="glyphicon glyphicon-cog" ></span></a>
-                     <a href="{{ url('assignmembers') }}"><span class="glyphicon glyphicon-user" ></span></a>
+                     <a class="show-users-list"><span class="glyphicon glyphicon-user" ></span></a>
                   </ul>
                </div>
             </div>  {{-- end of "list-of-projects" --}}
             
          @endforeach
    @endif
+   <div class="all-users-list">
       @foreach($users as $user) 
-      <div class="assign-members">   
-         <input type="checkbox" id="cb1" /> 
-      <div class="member--details">
-          <p>{{$user->firstname[0]}}.{{ $user->surname }}</p>
-         <a href=""><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-           <p hidden >{{$user->email}} </p></a>
-           <p>{{$user->tel}}</p>
-      </div>
-      </div><!--End of user-->
-   @endforeach 
-
+         <div class="assign-members">   
+            <div class="member--details">
+               <p>{{$user->firstname}} {{ $user->surname }}</p>
+               <p>{{$user->email}} </p></a>
+               <p>{{$user->tel}}</p>
+               <div id="AssignMember">
+                  <input type="checkbox" class="CheckIn"/><p class="CheckboxStatus"> Check me in</p>
+               </div>
+            </div>
+         </div><!--End of user-->
+      @endforeach 
+   </div>
 
 @stop

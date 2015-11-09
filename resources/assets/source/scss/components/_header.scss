@@ -8,10 +8,13 @@ body{
 position:absolute;
 z-index: 100;
 background:#f9f9f9;
-width: 100%}
+width: 100%;
+border-bottom: 1px solid #DDDDDD;
+}
 
 .navbar-collapse{
-overflow:visible;}
+overflow:visible;
+}
 
 .navbar-header{
   box-shadow: 0 0 20px 0;
@@ -112,7 +115,6 @@ overflow:visible;}
   width: 100%;
   //background-color: #f6b26b;
   background: radial-gradient(center, ellipse cover, #f6b26b 50%,#f4a250 100%);
-  box-shadow: 0px 3px 8px 0px;
   a{
     color:#000000;
   }
@@ -129,18 +131,24 @@ overflow:visible;}
 
 /*Assign members*/
 .assign-members{
-  // background-color: #D8DBDE;
-  box-shadow: inset 0px 0px 5px 0px #1288FF;
-  border-radius: 80px;
-  float:left; // Dit wordt gebruikt om de members naast elkaar te krijgen wanneer het scherm groter wordt
-  width: 150px;
-  margin: 10px 0  0 10px;
-  background: radial-gradient(center, ellipse cover, #95badb 48%,#6fa8dc 98%);
+  background-color: #f9f9f9;
+  width: 100%;
+  margin: 0px 0px 0px 5px;
+  border-bottom: 1px solid #A9A3A3;
+  //box-shadow: inset 0px 0px 5px 0px #1288FF;
+  //border-radius: 80px;
+  //float:left; // Dit wordt gebruikt om de members naast elkaar te krijgen wanneer het scherm groter wordt
+  
+  //margin: 10px 0  0 10px;
+ // background: radial-gradient(center, ellipse cover, #95badb 48%,#6fa8dc 98%);
 }
 
 .member--details{
     padding:30px;
     p{
       margin: 0px;
+      margin-left: 83px;
     }
   }
+
+

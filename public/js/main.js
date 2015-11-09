@@ -38,5 +38,27 @@ $(function(){
 });
 
 
+
+
 setTimeout(function() { 
-    $('.flashmessages').hide(); }, 3000);
+    $('.flashmessages').hide(3000); 
+});
+
+$(function(){ 
+    $('.all-users-list').hide();
+        $('.show-users-list').click(function(){
+            
+            $('.all-users-list').show();
+        });
+});
+
+// Replace the text when the checkbox is clicked
+
+$(function(){ 
+    $('.CheckIn').change(function() {
+          $('.CheckboxStatus').text('Check me in for:');
+          if(this.checked){
+           $(this).next().text('Im checked for:');
+          }
+    });
+});
