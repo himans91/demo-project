@@ -38,8 +38,6 @@ $(function(){
 });
 
 
-
-
 setTimeout(function() { 
     $('.flashmessages').hide(3000); 
 });
@@ -56,9 +54,17 @@ $(function(){
 
 $(function(){ 
     $('.CheckIn').change(function() {
-          $('.CheckboxStatus').text('Check me in for:');
-          if(this.checked){
-           $(this).next().text('Im checked for:');
-          }
+      $('.CheckboxStatus').text('Check me in for:');
+      // $('.CheckboxStatus').css('color', 'red');
+      if(this.checked){
+       $(this).next().text('Im checked for:');
+       // $('.CheckboxStatus').css('color', 'green');
+      }
     });
+});
+
+$(function(){
+    $('.hideproject').click(function(){
+        $('.list-of-projects').next().hide();
+    })
 });

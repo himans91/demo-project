@@ -2,8 +2,11 @@ $width:100%;
 
 
 body{
+  
   background-color: #E5E5E5;
+  color:#343434;
 }
+
 #navbar{
 position:absolute;
 z-index: 100;
@@ -62,39 +65,50 @@ overflow:visible;
 }
 
 .item-project-bar{
-  width:$width;
-  background-color: #f6b26b;
-  box-shadow: inset 0px 0px 5px 0px #ce9457;
-    a {
+  width: $width;
+  background-color: #acd43a;
+  box-shadow: inset 0px 0px 5px 0px #90B32E;
+    label {
         color:#000000;
         margin-left: 5px;
   }
 }
 
 .item-day-bar{
-  width: $width;
-  box-shadow: inset 0px 0px 5px 0px #6e925e;
-  background-color: #93c47d;
+    width: $width;
+    box-shadow: inset 0px 0px 5px 0px #B8B9B6;
+    background-color: #FDFDFD;
 }
 
 .item-user-bar{
-  width: $width;
-  background-color: #6fa8dc;
-  box-shadow: inset 0px 0px 5px 0px #537ea5;
+    width: $width;
+    background-color: #71a2b8;
+    box-shadow: inset 0px 0px 5px 0px #6C92A2;
 }
+
 
 .list-of-users {
   width: $width;
   //background-color: #6fa8dc;
-    box-shadow: 0px 3px 8px 0px;
-  background: radial-gradient(center, ellipse cover, #95badb 48%,#6fa8dc 98%);
+  // box-shadow: 0px 3px 8px 0px;
+  background-color: #71a2b8;
+  border-bottom: 1px solid #DDD;
+  ul { 
+    list-style-type: none;
+  }
 }
+
+
+.list-entry{
+  border-bottom: 1px solid #DDD;
+  p{
+      margin: 0px 0px 0px 5px;
+  }
+}
+
 .entry--image {
   img{
     margin: 5px 0px 0px 5px;
-  }
-  p{
-    margin-bottom: 0px;
   }
 }
 
@@ -112,13 +126,29 @@ overflow:visible;
 /*Project-search result*/
 
 .list-of-projects{
-  width: 100%;
-  //background-color: #f6b26b;
-  background: radial-gradient(center, ellipse cover, #f6b26b 50%,#f4a250 100%);
+    width: 100%;
+    //background-color: rgba(136, 136, 136, 0.33);
+    background-color:#acd43a;
   a{
     color:#000000;
   }
+  ul{
+    list-style-type: none;
+  }
 }
+
+.head-of-pojects {
+  width: 100%;
+  background-color: #343434;
+  p{
+    margin:0;
+  }
+}
+
+.result-head-title {
+      color:#ffffff;
+      margin-left: 41px;
+  }
 
 /*Add project*/
 .extern-location{
@@ -134,7 +164,8 @@ overflow:visible;
   background-color: #f9f9f9;
   width: 100%;
   margin: 0px 0px 0px 5px;
-  border-bottom: 1px solid #A9A3A3;
+  border-bottom: 1px solid #dddddd;
+
   //box-shadow: inset 0px 0px 5px 0px #1288FF;
   //border-radius: 80px;
   //float:left; // Dit wordt gebruikt om de members naast elkaar te krijgen wanneer het scherm groter wordt
@@ -144,11 +175,16 @@ overflow:visible;
 }
 
 .member--details{
-    padding:30px;
+  padding:15px;
+  margin: 0px 0px 0px 20px;
+  .CheckIn{
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-right: 50px;
     p{
-      margin: 0px;
-      margin-left: 83px;
+      margin: 0px 0px 0px 83px;
     }
-  }
-
+   }   
+}
 
