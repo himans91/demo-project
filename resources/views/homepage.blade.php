@@ -13,17 +13,21 @@ Homepage
                <div class="week-selector">
                <label for="selectweek">Select a week</label>
                   <select class="form-control" name="Weeknumber" id="sel1"> 
-                     @foreach($Weeknumber['defaultweek'] as $week )  
-                        <option value="" >Week: {{$week}}</option>
+                     @foreach($currentWeek as $week )  
+                        @if($week === "currentWeek")
+                           <option selected="selected" value="" >Week: {{date('W')}}</option>
+                        @else
+                           <option value="" >Week: {{$week}}</option>
+                        
+                        @endif
                      @endforeach
+                        
                   </select>
                </div>
                <div class="item-project-bar">
                   <label>Project</label>
                   <div class="item-day-bar">
-                     @foreach($Weeknumber['defaultday'] as $d)
-                        <label>{{$d}}</label>
-                     @endforeach
+                     <label>{{$currentDay}}</label>
                      <div class="item-user-bar">
                         <label>User</label>
                        <span class="glyphicon-user glyphicon-collapse-down" data-toggle="collapse" data-target=".list-of-users">

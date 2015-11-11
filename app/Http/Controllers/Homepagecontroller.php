@@ -15,22 +15,29 @@ class Homepagecontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
+        $weekArray = array();
+        $currentWeek = date('W'); // Gets default week number
+       // $defaultday = date('l'); //text day  show
 
-        $defaultweek = date('W'); // Gets default week number
-        // $defaultday = date('l');
-
-        $Weeknumber = array(
-            'defaultweek'=> $defaultweek,
-           'defaultday'=> $defaultday
-            );
+        // $Weeknumber = array(
+        //     'defaultweek'=> $defaultweek,
+        //   // 'defaultday'=> $defaultday
+        //     );
 
         $i = 0;                 
-        while ($i <= 51) {      /* this while will loop by all 51 numbers of week*/
+        while ($i <= 51) {  
+            if($currentWeek != $i) {
+                $weekArray[$i] = $i;
+            } else {
+                $weekArray[$i] = "currentWeek";
+            }
+            /* this while will loop by all 51 numbers of week*/
              $i++;              /* Will increment by one after the loop*/
-        $Weeknumber[] = $i;     /* Will Add the number into the array */
+       // $Weeknumber[] = $i;     /* And Add the number into the array */
         }
-
-        return view('homepage', compact('Weeknumber'));
+        //die(print_r($weekArray));
+        //return view('homepage', compact('Weeknumber'));
+        return view('homepage')->with('currentWeek', $weekArray)->with('currentDay', date('l'));
     }
     
     // public function getdate(){

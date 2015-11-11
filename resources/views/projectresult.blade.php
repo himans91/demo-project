@@ -9,7 +9,7 @@ Project search result
    @if($projects->isEmpty())
    <div class="alert alert-danger" role="alert">Nothing found!<a href="{{ url('projectsearch') }}"> Try Again</a></div>
       @else 
-       <div class="head-of-pojects" >
+       <div class="head-of-pojects">
                <div class="result-head-title">Search Result</div>
          @foreach ($projects as $project)
            
@@ -32,7 +32,6 @@ Project search result
       @foreach($users as $user) 
          <div class="assign-members">   
             <div class="member--details">
-
                <p><strong><h4>{{$user->firstname}} {{ $user->surname }}</h4></strong></p>
                <p><span class="glyphicon glyphicon-envelope" > </span> {{$user->email}} </p>
                <p><span class="glyphicon glyphicon-earphone" > </span> {{$user->tel}}</p>
@@ -42,6 +41,10 @@ Project search result
             </div>
          </div><!--End of user-->
       @endforeach 
+      <form class="login-form" method="post" action"">
+            <div class="button-wrapper">     
+               <button class="btn btn-primary button" type="submit">Submit</button>
+            </div>
+      </form>
    </div>
-
 @stop
