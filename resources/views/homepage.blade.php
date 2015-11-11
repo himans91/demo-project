@@ -12,14 +12,12 @@ Homepage
             <div class="item">
                <div class="week-selector">
                <label for="selectweek">Select a week</label>
-                   
-                     <select class="form-control" name="Weeknumber" id="sel1"> 4
-                     @foreach($Weeknumber as $number )  
-                        <option value="" > {{$number}}</option>
-                     
-                  @endforeach
+                  <select class="form-control" name="Weeknumber" id="sel1"> 
+                     @foreach($Weeknumber as $week )  
+                        <option value="" >Week: {{$week}}</option>
+                     @endforeach
                   </select>
-            </div>
+               </div>
                <div class="item-project-bar">
                   <label>Project</label>
                   <div class="item-day-bar">

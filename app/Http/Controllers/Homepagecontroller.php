@@ -14,37 +14,46 @@ class Homepagecontroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(){
 
+        $defaultweek = date('W'); // Gets default week number
+        //$startdate = Project::get('startdate');
         $Weeknumber = array(
-            // '1,',
-            // '2',
-            // '3', 
-            // '4',
-            // '5'
-        );
+            'defaultweek'=> $defaultweek);
 
-        $i = 0;
-        while ($i <= 51) {
-             $i++;
-       $Weeknumber[] = $i;
-   }
+        $i = 0;                 
+        while ($i <= 51) {      /* this while will loop by all 51 numbers of week*/
+             $i++;              /* Will increment by one after the loop*/
+        $Weeknumber[] = $i;     /* Will Add the number into the array */
+        }
 
         return view('homepage', compact('Weeknumber'));
     }
-    //  public function getWeeknumber()
-    // {
+    // public function GetProjectUsers(){
 
-    //     // $startdate = DB::table('projects')->get('startdate');
-       
-    //     $ddate = "2012-10-18";
-    //     $duedt = explode("-", $ddate);
-    //     $date  = mktime(0, 0, 0, $duedt[1], $duedt[2], $duedt[0]);
-    //     $week  = (int)date('W', $date);
-    //     return view('homepage', $date);
+    //         $start_date = '2007-03-24';
+    //         $end_date = '2009-06-26';
+
+    //         print_r(year_month($start_date, $end_date));
+
+
+    //         //Returns an array containing the years, months and days between two dates
+    //         function year_month($start_date, $end_date)
+    //         {
+    //             $begin = new DateTime( $start_date );
+    //             $end = new DateTime( $end_date);
+    //             $end->add(new DateInterval('P1D')); //Add 1 day to include the end date as a day
+    //             $interval = new DateInterval('P1W'); //Add 1 week
+    //             $period = new DatePeriod($begin, $interval, $end);
+    //             $aResult = array();
+    //             foreach ( $period as $dt )
+    //             {
+    //                 $aResult[$dt->format('Y')][$dt->format('F')][] = "Week ".$dt->format('W');
+    //             }
+
+    //             return view('homepage' compact($aResult));
+    //         }
     // }
-
     /**
      * Show the form for creating a new resource.
      *
