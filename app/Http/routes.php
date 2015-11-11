@@ -58,7 +58,7 @@ Route::group(["middleware" => "auth"], function() {
 	Route::get('homepage', 'Homepagecontroller@index');
 	Route::get('search', 'Homepagecontroller@search');
 	Route::get('projectsearch', 'Homepagecontroller@projectsearch');
-	//Route::get('GetProjectUsers', 'Homepagecontroller@GetProjectUsers')
+	//Route::get('homepage', 'Homepagecontroller@getdate');
 	/*-----------------------------------------------------------------------
 		User routes
 	-----------------------------------------------------------------------*/

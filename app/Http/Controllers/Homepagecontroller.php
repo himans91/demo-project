@@ -17,9 +17,12 @@ class Homepagecontroller extends Controller
     public function index(){
 
         $defaultweek = date('W'); // Gets default week number
-        //$startdate = Project::get('startdate');
+        // $defaultday = date('l');
+
         $Weeknumber = array(
-            'defaultweek'=> $defaultweek);
+            'defaultweek'=> $defaultweek,
+           'defaultday'=> $defaultday
+            );
 
         $i = 0;                 
         while ($i <= 51) {      /* this while will loop by all 51 numbers of week*/
@@ -29,7 +32,19 @@ class Homepagecontroller extends Controller
 
         return view('homepage', compact('Weeknumber'));
     }
-    // public function GetProjectUsers(){
+    
+    // public function getdate(){
+       
+    //     $defaultday = date('l');
+
+    //     $day = array(
+    //         'defaultday'=>$defaultday);
+
+    //      return view('homepage', compact('day'));
+    // }
+
+
+    //     // public function GetProjectUsers(){
 
     //         $start_date = '2007-03-24';
     //         $end_date = '2009-06-26';

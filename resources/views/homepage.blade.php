@@ -13,7 +13,7 @@ Homepage
                <div class="week-selector">
                <label for="selectweek">Select a week</label>
                   <select class="form-control" name="Weeknumber" id="sel1"> 
-                     @foreach($Weeknumber as $week )  
+                     @foreach($Weeknumber['defaultweek'] as $week )  
                         <option value="" >Week: {{$week}}</option>
                      @endforeach
                   </select>
@@ -21,7 +21,9 @@ Homepage
                <div class="item-project-bar">
                   <label>Project</label>
                   <div class="item-day-bar">
-                     <label>Monday</label>
+                     @foreach($Weeknumber['defaultday'] as $d)
+                        <label>{{$d}}</label>
+                     @endforeach
                      <div class="item-user-bar">
                         <label>User</label>
                        <span class="glyphicon-user glyphicon-collapse-down" data-toggle="collapse" data-target=".list-of-users">
@@ -39,13 +41,13 @@ Homepage
                                  <p class="media-heading">0632386556</p>
                                  <p class="media-heading">Utrecht</p>
                               </div>
-                           </div><!--End of user-->
-                        </div><!--End of user-list-->
-                     </div> <!--End of header-users-->
-                  </div> <!--End of header-day-->
-               </div> <!--End of header-project-->
-            </div> <!--End of item-->
-
+                           </div>
+                        </div><!--End of user-->
+                     </div><!--End of user-list-->
+                  </div> <!--End of header-users-->
+               </div> <!--End of header-day-->
+            </div> <!--End of header-project-->
+         </div> <!--End of item-->
       </div>
    </div><!--End of content-->
 </div><!--End of container-->
