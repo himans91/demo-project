@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-  Search
+Project search result
 @stop
 @extends('layouts.navbar')
 @section('content')
@@ -9,9 +9,10 @@
    @if($projects->isEmpty())
    <div class="alert alert-danger" role="alert">Nothing found!<a href="{{ url('projectsearch') }}"> Try Again</a></div>
       @else 
-         @foreach ($projects as $project)
-            <div class="head-of-pojects" >
+       <div class="head-of-pojects" >
                <div class="result-head-title">Search Result</div>
+         @foreach ($projects as $project)
+           
                <div class="list-of-projects"> 
                   <div class="media-body entry--info">
                      <Ul> 

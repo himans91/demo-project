@@ -604,9 +604,6 @@ body {
   left: 0;
   right: 0; }
 
-.homepagebanner {
-  width: 100%; }
-
 .week-selector {
   margin: 0 5px 10px 5px; }
 
@@ -640,9 +637,6 @@ body {
   .list-entry p {
     margin: 0px 0px 0px 5px; }
 
-.entry--image img {
-  margin: 5px 0px 0px 5px; }
-
 /*Search page*/
 .item-search-project.is-inactive {
   display: none; }
@@ -652,6 +646,7 @@ body {
 /*Project-search result*/
 .list-of-projects {
   width: 100%;
+  border-bottom: 1px solid #343434;
   background-color: #acd43a; }
   .list-of-projects a {
     color: #000000; }
@@ -688,8 +683,7 @@ body {
   .member--details .CheckIn {
     width: 20px;
     height: 20px;
-    float: right;
-    margin-right: 50px; }
+    float: right; }
     .member--details .CheckIn p {
       margin: 0px 0px 0px 83px; }
 

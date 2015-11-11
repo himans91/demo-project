@@ -29,11 +29,12 @@ body {
 }
 #page_content {
     @include clearfix;
-    padding: 10px;
+
 }
 #main {
     @include clearfix;
     width: 100%;
+    padding: 5px;
     float: left;
 }
 #sidebar {
@@ -56,7 +57,7 @@ body {
     position: absolute;
     width: 100%;
     background-color: #f1f1f1;
-    height: 70px
+
 }
 
 .dashboard-news{
@@ -64,7 +65,15 @@ body {
     top: 50px;
     width: 100%;
     background-color: #ffea00;
-    height: 125px;
+}
+.new--users{
+    width:100%;
+    background-color: #71a2b8;
+}
+
+.new--projects{
+    width:100%;
+    background-color: #acd43a;
 }
 
 .dashboard-case{
@@ -73,4 +82,7 @@ body {
     width: 100%;
     height: 125px;
     background-color: #39ad43;
+}
+.del-or-edit{
+    visibility: visible;
 }

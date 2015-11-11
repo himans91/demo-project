@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Project;
 
 class Homepagecontroller extends Controller
 {
@@ -15,8 +16,34 @@ class Homepagecontroller extends Controller
      */
     public function index()
     {
-        return view('homepage');
+
+        $Weeknumber = array(
+            // '1,',
+            // '2',
+            // '3', 
+            // '4',
+            // '5'
+        );
+
+        $i = 0;
+        while ($i <= 51) {
+             $i++;
+       $Weeknumber[] = $i;
+   }
+
+        return view('homepage', compact('Weeknumber'));
     }
+    //  public function getWeeknumber()
+    // {
+
+    //     // $startdate = DB::table('projects')->get('startdate');
+       
+    //     $ddate = "2012-10-18";
+    //     $duedt = explode("-", $ddate);
+    //     $date  = mktime(0, 0, 0, $duedt[1], $duedt[2], $duedt[0]);
+    //     $week  = (int)date('W', $date);
+    //     return view('homepage', $date);
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -61,6 +88,8 @@ class Homepagecontroller extends Controller
     {
         //
     }
+
+   
 
     /**
      * Show the form for editing the specified resource.

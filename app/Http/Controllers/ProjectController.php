@@ -13,6 +13,7 @@ use Input;
 use Request;
 
 
+
 class ProjectController extends Controller
 {
 
@@ -40,6 +41,7 @@ class ProjectController extends Controller
        // dd("dsad");
         $project = Project::findOrFail($id);    
         $project->update($request->all());
+
 
         return view('homepage');
 

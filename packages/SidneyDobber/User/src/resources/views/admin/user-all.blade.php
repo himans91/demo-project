@@ -17,7 +17,7 @@
     <table class="table-striped">
         <thead>
             <tr>
-                <th>Username</th>
+                <th>Action</th>
                 <th>E-mail</th>
                 <th>User role</th>
             </tr>
@@ -29,11 +29,10 @@
                     <td>
                         <a href="/admin/users/{{ $user->id }}" class="bold">{{ $user->username }}</a>
                         <div class="crud_wrapper">
-                            
+        
                             @if($user->userrole != 'superuser' && $userrole < 1)
-                                <a href="/admin/users/{{ $user->id }}">Edit</a>
-                                | <a href="/admin/users/{{ $user->id }}/delete">Delete</a>
-
+                                <a class="del-or-edit" href="/admin/users/{{ $user->id }}">Edit</a>
+                                | <a class="del-or-edit" href="/admin/users/{{ $user->id }}/delete">Delete</a>
                             @endif
                         </div>
                     </td>
