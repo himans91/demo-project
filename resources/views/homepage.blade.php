@@ -18,7 +18,6 @@ Homepage
                            <option selected="selected" value="" >Week: {{date('W')}}</option>
                         @else
                            <option value="" >Week: {{$week}}</option>
-                        
                         @endif
                      @endforeach
                         

@@ -16,27 +16,17 @@ class Homepagecontroller extends Controller
      */
     public function index(){
         $weekArray = array();
-        $currentWeek = date('W'); // Gets default week number
-       // $defaultday = date('l'); //text day  show
-
-        // $Weeknumber = array(
-        //     'defaultweek'=> $defaultweek,
-        //   // 'defaultday'=> $defaultday
-        //     );
+        $currentWeek = date('W'); // Gets the current weeknumber. The W will show the textual weeknumber
 
         $i = 0;                 
-        while ($i <= 51) {  
-            if($currentWeek != $i) {
-                $weekArray[$i] = $i;
-            } else {
-                $weekArray[$i] = "currentWeek";
+        while ($i <= 51) {              //this while will loop by all 51 numbers of week
+            if($currentWeek != $i) {    // If currentweek is not equal to variable i
+                $weekArray[$i] = $i;    // Then it will store the number into the array
+            } else {                    // Else
+                $weekArray[$i] = "currentWeek"; // It will store the text currentweek into the array
             }
-            /* this while will loop by all 51 numbers of week*/
-             $i++;              /* Will increment by one after the loop*/
-       // $Weeknumber[] = $i;     /* And Add the number into the array */
+             $i++;                          // After the loop the i variable will increment
         }
-        //die(print_r($weekArray));
-        //return view('homepage', compact('Weeknumber'));
         return view('homepage')->with('currentWeek', $weekArray)->with('currentDay', date('l'));
     }
     
