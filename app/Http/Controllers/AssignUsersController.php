@@ -30,7 +30,9 @@ class AssignUsersController extends Controller
      */
     public function create()
     {
-        //
+
+
+
     }
 
     /**
@@ -39,9 +41,17 @@ class AssignUsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        // $input = Request::all('assignuser');
+        // $id = User::get('id')
+        
+        // $new = new ProjectUsers;
+        // $input[''] = Carbon::now();
+
+        // ProjectUsers::create($input);
+
+        // return redirect('homepage');
     }
 
     /**

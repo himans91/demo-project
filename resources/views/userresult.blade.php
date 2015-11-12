@@ -5,22 +5,22 @@
 @extends('layouts.navbar')
 @section('content')
    @if($users->isEmpty())
-   <div class="alert alert-danger" role="alert">Nothing found!<a href="{{ url('search') }}">Try Again</a></div>
-      @else 
-       <div class="head-of-pojects" >
-               <div class="result-head-title">Search Result</div>
-         @foreach ($users as $user)
-            <div class="list-of-users ">    
-               <div class="media-body entry--info">
-                  <ul> 
-                     <li><p class="media-heading"><strong>Name: </strong>{{$user->firstname}} {{$user->surname}}</p></li>
-                     <li><p class="media-heading"><strong>Tel: </strong>{{$user->tel}}</p></li>
-                     <li><p class="media-heading"><strong>email: </strong>{{$user->email}} </p></li>
-                  </ul>
-               </div>
-            </div><!--end of 'list-of-users'-->
-         </div>
-         @endforeach 
+      <div class="alert alert-danger" role="alert">Nothing found!<a href="{{ url('search') }}">Try Again</a></div>
+         @else 
+            <div class="head-of-pojects" >
+               <div class="result-head-title">User(s)</div>
+                  @foreach ($users as $user)
+                     <div class="list-of-users ">    
+                        <div class="media-body entry--info">
+                           <ul> 
+                              <li><p class="media-heading"><strong>Name: </strong>{{$user->firstname}} {{$user->surname}}</p></li>
+                              <li><p class="media-heading"><strong>Tel: </strong>{{$user->tel}}</p></li>
+                              <li><p class="media-heading"><strong>email: </strong>{{$user->email}} </p></li>
+                           </ul>
+                        </div>
+                     </div><!--end of 'list-of-users'-->
+                  @endforeach
+            </div>
    @endif
  {{--   @foreach ($Project as $project)
       <div class="list-entry">    

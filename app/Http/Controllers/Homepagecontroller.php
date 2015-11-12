@@ -16,7 +16,9 @@ class Homepagecontroller extends Controller
      */
     public function index(){
         $weekArray = array();
+        $currentDate = date('Y-m-d'); // Gets the date of today
         $currentWeek = date('W'); // Gets the current weeknumber. The W will show the textual weeknumber
+        $projects = Project::all();
 
         $i = 0;                 
         while ($i <= 51) {              //this while will loop by all 51 numbers of week
@@ -27,7 +29,7 @@ class Homepagecontroller extends Controller
             }
              $i++;                          // After the loop the i variable will increment
         }
-        return view('homepage')->with('currentWeek', $weekArray)->with('currentDay', date('l'));
+        return view('homepage')->with('today', $currentDate)->with('allprojects', $projects)->with('currentWeek', $weekArray)->with('currentDay', date('l'));
     }
     
     // public function getdate(){
@@ -105,10 +107,32 @@ class Homepagecontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+       // $currentDate = date('Y-m-d'); 
+       // $projects = Project::all();   
+
+       // $projectlist= array(
+       //  'projects' => $project
+       //  );
+       // // $startDate = Project::get('startdate');
+       // // $endDate = Project::get('enddate');
+
+       // // $dates = array(
+       // //  'currrentdate' => $currentDate,
+       // //  'project' => $projects
+       // //  );
+       // // if (($currentDate > $startDate) && ($currentDate < $endDate)) {
+       // //      alert("Yes");
+       // //  }toda
+       // //      else {
+       // //      }
+       // //          alert("No");
+        
+      
+       // return view('homepage')->with( 'today', date('Y-m-d'))->with('projects', $projectlist);
     }
+
 
    
 

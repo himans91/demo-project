@@ -9,7 +9,7 @@
 				@foreach ($user->projects as $project)
 				<div class="assign-members">   
 					<div class="member--details">
-						{{$project->title}}
+						{{$project->title}} {{--Hier komt de if statement, die kijkt of project title gelijk is aan title(input)--}}
 					    <p>{{$user->firstname[0]}}.{{ $user->surname }}</p>
 						<a href=""><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 				        <p hidden >{{$user->email}}	</p></a>

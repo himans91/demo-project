@@ -43,6 +43,7 @@ Route::group(["middleware" => "auth"], function() {
 	-----------------------------------------------------------------------*/
 
 	Route::get('assignusers', 'AssignUsersController@index');
+	// Route::post('assignusers/store', 'AssignUsersController@store');
 	/*-----------------------------------------------------------------------
 		Search routes
 	-----------------------------------------------------------------------*/
@@ -58,6 +59,7 @@ Route::group(["middleware" => "auth"], function() {
 	Route::get('homepage', 'Homepagecontroller@index');
 	Route::get('search', 'Homepagecontroller@search');
 	Route::get('projectsearch', 'Homepagecontroller@projectsearch');
+	//Route::get('homepage/show', 'Homepagecontroller@show');
 	//Route::get('homepage', 'Homepagecontroller@getdate');
 	/*-----------------------------------------------------------------------
 		User routes

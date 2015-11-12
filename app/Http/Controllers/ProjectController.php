@@ -42,9 +42,7 @@ class ProjectController extends Controller
         $project = Project::findOrFail($id);    
         $project->update($request->all());
 
-
         return view('homepage');
-
     }  
 
     //Search for project
@@ -55,9 +53,9 @@ class ProjectController extends Controller
         $data = array(
             'projects' => $projects,
             'users' => User::all()
+            // 'title' => $title
         );
         return view('projectresult', $data);
-
     }
 
     // public function ShowUserList()
@@ -121,5 +119,4 @@ class ProjectController extends Controller
 
     }
 
-    
 }

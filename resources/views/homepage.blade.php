@@ -20,11 +20,17 @@ Homepage
                            <option value="" >Week: {{$week}}</option>
                         @endif
                      @endforeach
-                        
                   </select>
                </div>
-               <div class="item-project-bar">
-                  <label>Project</label>
+               
+               @foreach($allprojects as $project)
+                  @if(($today > $project->startdate) && ($today < $project->enddate))
+                  <div class="item-project-bar">
+                     <label>{{$project->title}}</label>
+                    {{--  @else
+                     <label>No projects today</label> --}}
+                  @endif
+               @endforeach
                   <div class="item-day-bar">
                      <label>{{$currentDay}}</label>
                      <div class="item-user-bar">
