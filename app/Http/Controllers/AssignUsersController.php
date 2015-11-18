@@ -30,8 +30,9 @@ class AssignUsersController extends Controller
      */
     public function create()
     {
+        // $user = User::lists('firstname', 'id');
 
-
+        // return view('projectresult', compact('user'));
 
     }
 
@@ -43,15 +44,26 @@ class AssignUsersController extends Controller
      */
     public function store()
     {
-        // $input = Request::all('assignuser');
-        // $id = User::get('id')
+        // // $input = Request::all('assignuser');
+        // // $id = User::get('id')
         
-        // $new = new ProjectUsers;
-        // $input[''] = Carbon::now();
+        // // $new = new ProjectUsers;
+        // // $input[''] = Carbon::now();
 
-        // ProjectUsers::create($input);
+        // // ProjectUsers::create($input);
 
-        // return redirect('homepage');
+        // // return redirect('homepage');
+
+        // $user_checked = Request::all('user');
+
+        // $projectuser = ProjectUser::all()
+        // // $projectuser = new ProjectUser;
+
+        // // $user_checked[''] = Carbon::now();
+
+        // // ProjectUser::create($user_checked);
+
+        // return view('projectsearch', compact($projectuser));
     }
 
     /**

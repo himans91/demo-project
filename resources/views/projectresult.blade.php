@@ -6,47 +6,52 @@ Project search result
 @section('content')
 
    @if($projects->isEmpty())
-   <div class="alert alert-danger" role="alert">Nothing found!<a href="{{ url('projectsearch') }}"> Try Again</a></div>
-      @else 
+      <div class="alert alert-danger" role="alert">Nothing found!<a href="{{ url('assignusers') }}"> Try Again</a></div>
+   @else 
+   <form class="Users-CheckIn-Form" method="post" >
+      {!! csrf_field() !!}
       <div class="head-of-pojects">
          <div class="result-head-title">Project(s)</div>
          @foreach ($projects as $project)
-               <div class="list-of-projects"> 
-                  <div class="media-body entry--info">
-                     <Ul> 
-                        <li><p class="media-heading"><strong>Project-title:</strong> {{$project->title}}</p></li>
-                        <li><p class="media-heading"><strong>Telephone:</strong> {{$project->telephone}}</p></li>
-                        <li><p class="media-heading"><strong>City:</strong> {{$project->city}}</p></li>
-                        <a href="editproject/{id}"><span class="glyphicon glyphicon-cog" ></span></a>
+            <div class="list-of-projects"> 
+               <div class="media-body entry--info">
+                  <ul> 
+                     {{$project->id}}
+                     <li><p class="media-heading"><strong>Project-title:</strong> {{$project->title}}</p></li>
+                     <li><p class="media-heading"><strong>Telephone:</strong> {{$project->telephone}}</p></li>
+                     <li><p class="media-heading"><strong>City:</strong> {{$project->city}}</p></li>
+                     @if(\SidneyDobber\User\AEUser::authorize('users'))
+                        <a href="editproject/{{$project->id}}"><span class="glyphicon glyphicon-cog" ></span></a>
                         <a class="show-users-list"><span class="glyphicon glyphicon-user" ></span></a>
                         <span class="glyphicon glyphicon-minus hideproject"></span>
-                     </ul>
-                  </div>
-               </div>  {{-- end of "list-of-projects" --}}
-            </div>
-         @endforeach
-   @endif
-   <div class="all-users-list">
-      @foreach($users as $user) 
-         <div class="assign-members">   
-            <div class="member--details">
-               <p hidden="true">{{$user->id}} </p>
-               <p><strong><h4>{{$user->firstname}} {{ $user->surname }}</h4></strong></p>
-               <p><span class="glyphicon glyphicon-envelope"></span> {{$user->email}} </p>
-               <p><span class="glyphicon glyphicon-earphone"></span> {{$user->tel}}</p>
-               <div class="member--checkin">
-                  <input type="checkbox" value=" " name="assignuser" class="CheckIn"/> <p class="CheckboxStatus">Check me in for</p>
+                     @endif
+                     <input type="checkbox" value="{{$project->id}}" id="" name="id" class="CheckIn"/> 
+                  </ul>
                </div>
-            </div>
-         </div><!--End of user-->
-      @endforeach 
-      <form class="login-form" method="post" action"">
-            <div class="button-wrapper">     
-               <button class="btn btn-primary button" type="submit">Check in</button>
-            </div>
-      </form>
-   </div>
-
+            </div>{{-- end of "list-of-projects" --}}
+         @endforeach
+      </div>
+      <div class="all-users-list">
+         @foreach($users as $user) 
+            <div class="assign-members">   
+               <div class="member--details">
+                  <p hidden="true">{{$user->id}} </p>
+                  <p><strong><h4>{{$user->firstname}} {{ $user->surname }}</h4></strong></p>
+                  <p><span class="glyphicon glyphicon-envelope"></span> {{$user->email}} </p>
+                  <p><span class="glyphicon glyphicon-earphone"></span> {{$user->tel}}</p>
+                  <div class="member--checkin">
+                     <input type="checkbox" value="{{$user->id}}" id="" name="id" class="CheckIn"/> 
+                     <p class="CheckboxStatus">Check me in for: </p>
+                  </div>
+               </div>
+            </div><!--End of user-->
+         @endforeach 
+         <div class="button-wrapper">     
+            <button class="btn btn-primary button" type="submit">Check in</button>
+         </div>
+      </div>
+   </form>
+   @endif
 {{--    @foreach($users as $user)
          <tr>
            @if($project->title === $projects) 

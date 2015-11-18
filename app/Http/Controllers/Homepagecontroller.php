@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Project;
+use App\User;
 
 class Homepagecontroller extends Controller
 {
@@ -19,6 +20,7 @@ class Homepagecontroller extends Controller
         $currentDate = date('Y-m-d'); // Gets the date of today
         $currentWeek = date('W'); // Gets the current weeknumber. The W will show the textual weeknumber
         $projects = Project::all();
+        $users = User::all();
 
         $i = 0;                 
         while ($i <= 51) {              //this while will loop by all 51 numbers of week
@@ -29,8 +31,16 @@ class Homepagecontroller extends Controller
             }
              $i++;                          // After the loop the i variable will increment
         }
-        return view('homepage')->with('today', $currentDate)->with('allprojects', $projects)->with('currentWeek', $weekArray)->with('currentDay', date('l'));
+        return view('homepage')->with('userslist', $users)->with('today', $currentDate)->with('allprojects',
+         $projects)->with('currentWeek', $weekArray)->with('currentDay', date('l'));
     }
+
+    // public function getassignedusers(){
+
+    //     $users = User::lists('firstname');
+    
+    //     return view('homepage', compact('users'));
+    // }
     
     // public function getdate(){
        

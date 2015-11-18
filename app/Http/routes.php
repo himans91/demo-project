@@ -37,7 +37,8 @@ Route::group(["middleware" => "auth"], function() {
 	Route::get('editproject/{id}', 'ProjectController@index');
 	Route::post('editproject/{id}', 'ProjectController@edit');
 	Route::post('projectsearch', 'ProjectController@show');
-	
+	Route::post('assignusers', 'ProjectController@AssignUser');
+	//Route::post('projectsearch', 'ProjectController@update');
 	/*-----------------------------------------------------------------------
 		AsignUser routes
 	-----------------------------------------------------------------------*/
@@ -59,6 +60,8 @@ Route::group(["middleware" => "auth"], function() {
 	Route::get('homepage', 'Homepagecontroller@index');
 	Route::get('search', 'Homepagecontroller@search');
 	Route::get('projectsearch', 'Homepagecontroller@projectsearch');
+	// Route::get('homepage', 'Homepagecontroller@show');
+	//Route::get('homepage', 'Homepagecontroller@getassignedusers');
 	//Route::get('homepage/show', 'Homepagecontroller@show');
 	//Route::get('homepage', 'Homepagecontroller@getdate');
 	/*-----------------------------------------------------------------------

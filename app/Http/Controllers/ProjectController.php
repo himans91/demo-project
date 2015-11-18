@@ -24,14 +24,12 @@ class ProjectController extends Controller
      */
         public function index($id)
     {
-
         //("ds");
         $project = Project::findOrFail($id); 
         // $user->firstname = "test";
         // $user->save();
 
         return view('editproject', $project);
-       
     }
 
 
@@ -50,44 +48,48 @@ class ProjectController extends Controller
     {   
         $title = Input::get('title');
         $projects = Project::where('title', 'LIKE', '%' . $title . '%')->get();     
+        //$projectuser = ProjectUser::where('title', 'LIKE', '%' . $title . '%')->get();
         $data = array(
             'projects' => $projects,
             'users' => User::all()
-            // 'title' => $title
         );
         return view('projectresult', $data);
     }
 
-    // public function ShowUserList()
-    // {
-    //     $users = User::all();
+
+    public function AssignUser($id)
+    {
+
+        $project->id = Input::get('id');
+        $user->id = Input::get('id');
+
+
+        $projects = new project(array(
+            'id' => Project::get(4),
+            'user-id' =>  User::get(9),
+            ));
+
+        $projects->save('project_user');
+
+        dd($projects);
+
+        // $user = User::find(1);
+
         
-    //     return view('projectresult', compact('users'));
-    // }
 
-    // public function ShowAssignedUsers()
-    // {
-    //     $users = User::lists('firstname')
-    //     return view('projectresult', copac$user);
-    // }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  CreateTaskRequest  $request
-     * @return Response
-     */
+        return view('assignusers', compact($projects));
 
 
 
+        // get project id from search function above (show)
+        // user id by clicking checkbox
 
+        //attach those by  attach function
+
+
+
+    }
+    
     public function store()
     {
     
