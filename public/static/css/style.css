@@ -573,11 +573,11 @@ body {
   width: 100%;
   border-bottom: 1px solid #DDDDDD; }
 
+.navbar {
+  margin-bottom: 0px; }
+
 .navbar-collapse {
   overflow: visible; }
-
-.navbar-header {
-  box-shadow: 0 0 20px 0; }
 
 .login-form {
   margin-top: 10%; }
@@ -677,16 +677,31 @@ body {
   margin: 0px 0px 0px 5px;
   border-bottom: 1px solid #dddddd; }
 
+.all-users-list p {
+  margin: 0px; }
+
 .member--details {
   padding: 15px;
   margin: 0px 0px 0px 20px; }
-  .member--details .CheckIn {
-    width: 20px;
-    height: 20px;
-    float: right; }
-    .member--details .CheckIn p {
-      margin: 0px 0px 0px 83px; }
+  .member--details .CheckIn p {
+    margin: 0px 0px 0px 83px; }
 
+.assign-date-option {
+  display: none; }
+
+.assign-date-option {
+  display: none; }
+
+.final-assign-option {
+  display: none; }
+
+/*
+
+
+*/
+/* ==================================================================== */
+/* CHECKBOX TYPE 3 ---------------------------------------------------- */
+/* ==================================================================== */
 .footer {
   font-size: 0.8em;
   border-top: 1px solid #fff; }

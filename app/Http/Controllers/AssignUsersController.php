@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
+use App\Project;
+use Input;
 
 class AssignUsersController extends Controller
 {
@@ -16,11 +18,15 @@ class AssignUsersController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        
-        //dd($users);
-        // $data = array('users' => $users);
-        return view('assignusers', compact('users'));
+        $project = Project::all();
+        $user = User::all();
+
+        $data = array(
+            'projects' => $project, 
+            'users' => $user
+            );
+
+        return view('assignusers', $data);
     }
 
     /**
@@ -44,26 +50,23 @@ class AssignUsersController extends Controller
      */
     public function store()
     {
-        // // $input = Request::all('assignuser');
-        // // $id = User::get('id')
         
-        // // $new = new ProjectUsers;
-        // // $input[''] = Carbon::now();
+        $project = Input::get('project');
+        $user = Input::get('user');
+        $day = Input::get('day');
+        //$fullday = Input::get('is_fullday');
+        $begindate =  Input::get('begindate');
+        $enddate = Input::get('enddate');
 
-        // // ProjectUsers::create($input);
+        dd($project, $user, $day, $begindate, $enddate);
+        $new_user()->projects()->attach($project);
 
-        // // return redirect('homepage');
+        return redirect('assignusers');
 
-        // $user_checked = Request::all('user');
 
-        // $projectuser = ProjectUser::all()
-        // // $projectuser = new ProjectUser;
 
-        // // $user_checked[''] = Carbon::now();
 
-        // // ProjectUser::create($user_checked);
 
-        // return view('projectsearch', compact($projectuser));
     }
 
     /**
@@ -72,10 +75,17 @@ class AssignUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //$users = App\User::find();
+        // $projecttitle = Input::('option');
 
+        // $projects = Project::where('title', 'LIKE', '%' . $title . '%')->get();     
+        // $data = array(
+        //     'projects' => $projects,
+        // );
+
+        // dd($data);
+        // return view('assignusers', $data);
     }
 
     /**

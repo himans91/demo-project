@@ -1,22 +1,102 @@
 {{-- All users --}}
 
 @extends('layouts.master')
-
+@section('title')
+Assign users
+@stop
+@extends('layouts.navbar')
+@section('content')
 
 {{-- Users per project --}}
-		@foreach($users as $user)
-			<tr>
-				@foreach ($user->projects as $project)
-				<div class="assign-members">   
-					<div class="member--details">
-						{{$project->title}} {{--Hier komt de if statement, die kijkt of project title gelijk is aan title(input)--}}
-					    <p>{{$user->firstname[0]}}.{{ $user->surname }}</p>
-						<a href=""><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-				        <p hidden >{{$user->email}}	</p></a>
-				        <p>{{$user->tel}}</p>
-				 	</div>
-				</div><!--End of user-->
-			    @endforeach
-			</tr>
-		@endforeach
-	
+
+<form class="Users-CheckIn-Form" method="post" action="assignedusers/store">
+      {!! csrf_field() !!}
+    <div class="head-of-pojects">
+        <div class="result-head-title">Project(s)</div>
+        @foreach ($projects as $project)
+            <div class="list-of-projects"> 
+               	<div class="media-body entry--info">
+	                <ul> 
+	                    {{$project->id}}
+	                    <li><p class="media-heading">Project title: <strong>{{$project->title}}</strong></p></li>
+                     	<li><p class="media-heading">City: <strong> {{$project->city}}</strong></p></li>
+	                    @if(\SidneyDobber\User\AEUser::authorize('users'))
+	                       <a href="editproject/{{$project->id}}"><span class="glyphicon glyphicon-cog" ></span></a>
+	                       <a class="show-users-list"><span class="glyphicon glyphicon-user" ></span></a>
+	                       <span class="glyphicon glyphicon-minus hideproject"></span>
+	                    @endif
+	                    <input type="checkbox" value="{{$project->id}}" id="" name="project" class="CheckIn"/> 
+	                </ul>
+               	</div>
+            </div>{{-- end of "list-of-projects" --}}
+        @endforeach
+    </div>
+    <div class="all-users-list">
+        @foreach($users as $user) 
+
+            <div class="assign-members">   
+               	<div class="member--details">
+	                <p>Name: <strong>{{$user->firstname}} {{ $user->surname }}</strong></p>
+	                <p>Tel: <strong>{{$user->tel}}</strong></p>
+                  	<div class="member--checkin">
+                 
+						<div class="radio assign-day-option">
+						  <label><input type="radio" name="day" value="H">Half day</label>
+						</div>
+						<div class="radio assign-day-option">
+						  <label><input type="radio" name="day" value="F">Full day</label>
+						</div>
+						
+							<div class="assign-date-option">
+								<p>Start date</p>
+								<div class="input-group " id="datetimepicker">
+									<input  type="date" name="begindate" class="form-control" />
+				                    <span class="input-group-addon">
+				                        <span class="glyphicon glyphicon-calendar"></span>
+				                    </span>
+			                    </div>
+			                    <p>end date</p>
+								<div class="input-group" id="datetimepicker">
+									<input  type="date" name="enddate" class="form-control" />
+				                    <span class="input-group-addon">
+				                        <span class="glyphicon glyphicon-calendar"></span>
+				                    </span>
+			                    </div>
+			                </div>
+			                <div class="final-assign-option">
+		                    <div class="checkbox ">
+	                  			<label>
+			                    <input  type="checkbox" value="{{$user->id}}" id="" name="user[]" class="CheckIn"/> 
+			                    <p class="CheckboxStatus">Check me in for: </p> 
+			                	</label>
+							</div>
+	                    {{-- <div class="button-wrapper">     
+						    <button class="btn btn-primary button" type="submit">Check in</button>
+						</div> --}}
+					</div>
+				</div>
+            </div>
+            </div>
+        @endforeach 
+  	
+	<div class="button-wrapper">     
+	    <button class="btn btn-primary button" type="submit">Check in</button>
+	</div>
+
+</form>
+@stop
+{{-- 	@foreach($users as $user)
+		<tr>
+			@foreach ($user->projects as $project)
+			<div class="assign-members">   
+				<div class="member--details">
+					{{$project->title}} {{--Hier komt de if statement, die kijkt of project title gelijk is aan title(input)--}}
+				  {{--  <p>{{$user->firstname[0]}}.{{ $user->surname }}</p>
+					<a href=""><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+			        <p hidden >{{$user->email}}	</p></a>
+			        <p>{{$user->tel}}</p>
+			 	</div>
+			</div><!--End of user-->
+		    @endforeach
+		</tr>
+	@endforeach --}}

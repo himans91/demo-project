@@ -66,5 +66,19 @@ $(function(){
 $(function(){
     $('.hideproject').click(function(){
         $('.list-of-projects').next().hide();
-    })
+    });
 });
+
+$(function(){
+    $('.assign-day-option').click(function(){
+        $('.assign-date-option').show();
+      });
+});
+
+$(function(){
+    $('.assign-date-option').click(function(){
+        $('.final-assign-option').show();
+          });
+});
+
+

@@ -8,7 +8,6 @@ Project search result
    @if($projects->isEmpty())
       <div class="alert alert-danger" role="alert">Nothing found!<a href="{{ url('assignusers') }}"> Try Again</a></div>
    @else 
-   <form class="Users-CheckIn-Form" method="post" >
       {!! csrf_field() !!}
       <div class="head-of-pojects">
          <div class="result-head-title">Project(s)</div>
@@ -16,22 +15,40 @@ Project search result
             <div class="list-of-projects"> 
                <div class="media-body entry--info">
                   <ul> 
-                     {{$project->id}}
-                     <li><p class="media-heading"><strong>Project-title:</strong> {{$project->title}}</p></li>
-                     <li><p class="media-heading"><strong>Telephone:</strong> {{$project->telephone}}</p></li>
-                     <li><p class="media-heading"><strong>City:</strong> {{$project->city}}</p></li>
-                     @if(\SidneyDobber\User\AEUser::authorize('users'))
-                        <a href="editproject/{{$project->id}}"><span class="glyphicon glyphicon-cog" ></span></a>
-                        <a class="show-users-list"><span class="glyphicon glyphicon-user" ></span></a>
-                        <span class="glyphicon glyphicon-minus hideproject"></span>
-                     @endif
-                     <input type="checkbox" value="{{$project->id}}" id="" name="id" class="CheckIn"/> 
+                     <li><p class="media-heading">project title: <strong>{{$project->title}}</strong></p></li>
+                     <li><p class="media-heading">city: <strong> {{$project->city}}</strong></p></li>
+                     <li><p class="media-heading">Tel: <strong> {{$project->telephone}}</strong></p></li>
+                     <li><p class="media-heading">Status: <strong> </strong></p></li>
                   </ul>
+{{--                   <div class="project-modal"> 
+                     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+                       Launch 
+                     </button>
+                     <!-- Modal -->
+                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                       <div class="modal-dialog" role="document">
+                         <div class="modal-content">
+                           <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                             <h4 class="modal-title" id="myModalLabel">Project info</h4>
+                           </div>
+                           <div class="modal-body">
+                             {{$project->title}}
+                             {{$project->city}}
+                              {{$project->telephone}}
+                           </div>
+                           <div class="modal-footer">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                  </div> --}}
                </div>
             </div>{{-- end of "list-of-projects" --}}
          @endforeach
       </div>
-      <div class="all-users-list">
+{{--       <div class="all-users-list">
          @foreach($users as $user) 
             <div class="assign-members">   
                <div class="member--details">
@@ -50,7 +67,7 @@ Project search result
             <button class="btn btn-primary button" type="submit">Check in</button>
          </div>
       </div>
-   </form>
+   </form> --}}
    @endif
 {{--    @foreach($users as $user)
          <tr>

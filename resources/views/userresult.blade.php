@@ -13,9 +13,9 @@
                      <div class="list-of-users ">    
                         <div class="media-body entry--info">
                            <ul> 
-                              <li><p class="media-heading"><strong>Name: </strong>{{$user->firstname}} {{$user->surname}}</p></li>
-                              <li><p class="media-heading"><strong>Tel: </strong>{{$user->tel}}</p></li>
-                              <li><p class="media-heading"><strong>email: </strong>{{$user->email}} </p></li>
+                              <li><p class="media-heading">Name: <strong>{{$user->firstname}} {{$user->surname}}</strong></p></li>
+                              <li><p class="media-heading">Tel: <strong>{{$user->tel}}</strong></p></li>
+                              <li><p class="media-heading">email: <strong>{{$user->email}} </strong> </p></li>
                            </ul>
                         </div>
                      </div><!--end of 'list-of-users'-->

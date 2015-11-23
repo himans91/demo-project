@@ -9,11 +9,19 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+                <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+                <li><a href="{{ url('homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+                    </a>
+                </li>
                 <li><a href="{{ url('edituser', [ Auth::user()->id ]) }}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> My profile
                     </a>
                 </li>
+                @if(\SidneyDobber\User\AEUser::authorize('users'))
+                <li><a href="{{ url('assignusers') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Assign users
+                    </a>
+                </li>
+                @endif
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Admin <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -24,9 +32,7 @@
                         @endif
                     </ul>
                 </li>   
-                <li><a href="{{ url('homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
-                    </a>
-                </li>
+                
                 <li><a href="{{ url('addproject') }}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add project
                     </a>
                 </li>
@@ -45,4 +51,5 @@
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
 </nav>
+
 @show

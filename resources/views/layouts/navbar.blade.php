@@ -10,7 +10,13 @@
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
+				<li><a href="{{ url('homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+			  		</a>
+			  	</li>
 				<li><a href="{{ url('edituser', [ Auth::user()->id ]) }}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> My profile
+			  		</a>
+			  	</li>
+				<li><a href="{{ url('assignusers') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Assign users
 			  		</a>
 			  	</li>
 			  	<li class="dropdown">
@@ -23,9 +29,7 @@
 		            	@endif
 	          		</ul>
         		</li>	
-		  	  	<li><a href="{{ url('homepage') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
-			  		</a>
-			  	</li>
+		  	  	
 			  	<li><a href="{{ url('addproject') }}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add project
 			  		</a>
 			  	</li>
