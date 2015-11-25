@@ -48,7 +48,7 @@ Assign users
 					<div class="singleday-date">
 						<p>Single date</p>
 						<div class="input-group " id="datetimepicker">
-							<input  type="date" name="singledate" class="form-control" />
+							<input  type="date" name="single_date" class="form-control" />
 		                    <span class="input-group-addon">
 		                        <span class="glyphicon glyphicon-calendar"></span>
 		                    </span>
@@ -57,14 +57,14 @@ Assign users
 					<div class="multidays-date assign-date-option ">
 						<p>begin date</p>
 						<div class="input-group " id="datetimepicker">
-							<input  type="date" name="begindate" class="form-control" />
+							<input  type="date" name="begin_date" class="form-control" />
 		                    <span class="input-group-addon">
 		                        <span class="glyphicon glyphicon-calendar"></span>
 		                    </span>
 	                    </div>
 	                    <p>end date</p>
 						<div class="input-group " id="datetimepicker">
-							<input  type="date" name="enddate" class="form-control" />
+							<input  type="date" name="end_date" class="form-control" />
 		                    <span class="input-group-addon">
 		                        <span class="glyphicon glyphicon-calendar"></span>
 		                    </span>

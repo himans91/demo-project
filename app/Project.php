@@ -39,7 +39,7 @@ class Project extends Model {
 
     public function users()
     {
-        return $this->belongsToMany('App\User')->withTimestamps();
+        return $this->belongsToMany('App\User', 'assigned_users', 'project_id', 'user_id')->withPivot('singleday', 'single_date', 'multidays', 'begin_date', 'end_date')->withTimestamps();
     }
 
 }

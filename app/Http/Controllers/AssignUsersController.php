@@ -57,12 +57,20 @@ class AssignUsersController extends Controller
 
         $user = Input::get('user');
         $day = Input::get('day');
-        $singleday = Input::get('singledate');
-        $begindate =  Input::get('begindate');
-        $enddate = Input::get('enddate');
+        $singleday = Input::get('single_date');
+        $begindate =  Input::get('begin_date');
+        $enddate = Input::get('end_date');
 
+        $data = array(
+            'day'=> $day,
+            'singleday' => $singleday,
+            'begindate'=> $begindate,
+            'enddate' => $enddate
+            );
         dd($project, $user, $day, $singleday, $begindate, $enddate);
-        $user()->projects()->attach($project);
+        Auth::user()->projects()->attach($project);
+
+       // $user()->save();
 
         return redirect('assignusers');
 
