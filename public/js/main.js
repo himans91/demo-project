@@ -42,26 +42,26 @@ setTimeout(function() {
     $('.flashmessages').hide(3000); 
 });
 
-$(function(){ 
-    $('.all-users-list').hide();
-        $('.show-users-list').click(function(){
+// $(function(){ 
+//     $('.all-users-list').hide();
+//         $('.show-users-list').click(function(){
             
-            $('.all-users-list').show();
-        });
-});
+//             $('.all-users-list').show();
+//         });
+// });
 
-// Replace the text when the checkbox is clicked
+// // Replace the text when the checkbox is clicked
 
-$(function(){ 
-    $('.CheckIn').change(function() {
-      $('.CheckboxStatus').text('Check me in for:');
-      // $('.CheckboxStatus').css('color', 'red');
-      if(this.checked){
-       $(this).next().text('Im checked for:');
-       // $('.CheckboxStatus').css('color', 'green');
-      }
-    });
-});
+// $(function(){ 
+//     $('.CheckIn').change(function() {
+//       $('.CheckboxStatus').text('Check me in for:');
+//       // $('.CheckboxStatus').css('color', 'red');
+//       if(this.checked){
+//        $(this).next().text('Im checked for:');
+//        // $('.CheckboxStatus').css('color', 'green');
+//       }
+//     });
+// });
 
 $(function(){
     $('.hideproject').click(function(){
@@ -69,16 +69,74 @@ $(function(){
     });
 });
 
-$(function(){
-    $('.assign-day-option').click(function(){
-        $('.assign-date-option').show();
-      });
-});
+// Oplossing voor meerdere div's van hetzelfde naam. Dus  meerdere gebruikers
+// $(function(){
+//     $('.assign-day-option').click(function(){
+//         var myParent = $(this).closest('div.assign-members');
+//         myParent.find('.assign-date-option').show();
+//       });
+// });
+
+// $(function(){
+//     $('.assign-date-option').click(function(){
+//         $('.final-assign-option').show();
+//           });
+// });
+
 
 $(function(){
-    $('.assign-date-option').click(function(){
-        $('.final-assign-option').show();
-          });
+    $('.CheckIn').click(function(){
+      $('assign-members').hide();
+    });
 });
 
+$('.CheckIn').on('click',function(){
+      $('assign-members').hide();
+    });
 
+//Function for selecting the current project and hide others
+
+$(function(){
+
+  $('.all-users-list').hide();
+  $('.item .checkbox').on('click', function(){  
+
+      if($(this).is(':checked')) {       
+          $('.list-of-projects').hide();  
+          $(this).closest('div.list-of-projects').show(); 
+          $('.all-users-list').show();
+
+      } else {
+         $('.list-of-projects').show();
+         $('.all-users-list').hide();
+      }          
+  });
+});
+
+ $(function(){
+    $('.singleday').on('click', function(){
+      if($(this).is(':checked')) {
+        $('.singleday-date').show();
+      }
+       else  {
+          $('.singleday-date').hide();
+       }
+    });
+ });
+
+  $(function(){
+    $('.multidays').on('click', function(){
+      if($(this).is(':checked')) {
+        $('.multidays-date').show();
+      }
+       else  {
+          $('.multidays-date').hide();
+       }
+    });
+ });
+
+ $(function(){
+$('.example').prop('checked', true);
+$('.example').prop('checked', false);
+});
+// });

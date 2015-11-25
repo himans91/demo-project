@@ -83,6 +83,7 @@ overflow:visible;
 
 .list-of-users {
   width: $width;
+
   //background-color: #6fa8dc;
   // box-shadow: 0px 3px 8px 0px;
   background-color: #71a2b8;
@@ -155,6 +156,7 @@ overflow:visible;
   margin: 0px 0px 0px 5px;
   border-bottom: 1px solid #dddddd;
 
+
   //box-shadow: inset 0px 0px 5px 0px #1288FF;
   //border-radius: 80px;
   //float:left; // Dit wordt gebruikt om de members naast elkaar te krijgen wanneer het scherm groter wordt
@@ -173,9 +175,7 @@ overflow:visible;
   padding:15px;
   margin: 0px 0px 0px 20px;
   .CheckIn{
-    // width: 20px;
-    // height: 20px;
- //   float: right;
+    visibility: hidden;
     p{
       margin: 0px 0px 0px 83px;
     }
@@ -193,6 +193,18 @@ overflow:visible;
 
 .final-assign-option{
     display: none;
+}
+.item{
+    display: inline-block;    
+
+  }
+
+.singleday-date{
+  display:none;
+}
+
+.multidays-date{
+  display:none;
 }
 /*
 

@@ -40,7 +40,8 @@
 			            <li><a href="{{ url('projectsearch') }}">Project</a></li>
 	          		</ul>
 			  	</li>
-			  	<li> @if (Auth::check())
+			  	<li> 
+			  	@if (Auth::check())
                     <a href="/logout"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> logout </a> 
                 @endif
 			  	</li>

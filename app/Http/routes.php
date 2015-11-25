@@ -44,7 +44,7 @@ Route::group(["middleware" => "auth"], function() {
 	-----------------------------------------------------------------------*/
 
 	Route::get('assignusers', 'AssignUsersController@index');
-	Route::post('assignedusers/store', 'AssignUsersController@store');
+	Route::post('assignedusers', 'AssignUsersController@store');
 	/*-----------------------------------------------------------------------
 		Search routes
 	-----------------------------------------------------------------------*/

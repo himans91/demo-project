@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\User;
 use App\Project;
 use Input;
+use Auth;
 
 class AssignUsersController extends Controller
 {
@@ -18,8 +19,9 @@ class AssignUsersController extends Controller
      */
     public function index()
     {
+        $currentDate = date('Y-m-d'); // Gets the date of today
         $project = Project::all();
-        $user = User::all();
+        $user = Auth::user();
 
         $data = array(
             'projects' => $project, 
@@ -52,20 +54,17 @@ class AssignUsersController extends Controller
     {
         
         $project = Input::get('project');
+
         $user = Input::get('user');
         $day = Input::get('day');
-        //$fullday = Input::get('is_fullday');
+        $singleday = Input::get('singledate');
         $begindate =  Input::get('begindate');
         $enddate = Input::get('enddate');
 
-        dd($project, $user, $day, $begindate, $enddate);
-        $new_user()->projects()->attach($project);
+        dd($project, $user, $day, $singleday, $begindate, $enddate);
+        $user()->projects()->attach($project);
 
         return redirect('assignusers');
-
-
-
-
 
     }
 
@@ -75,18 +74,18 @@ class AssignUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
-    {
-        // $projecttitle = Input::('option');
+    // public function show()
+    // {
+    //     $projecttitle = Input::('option');
 
-        // $projects = Project::where('title', 'LIKE', '%' . $title . '%')->get();     
-        // $data = array(
-        //     'projects' => $projects,
-        // );
+    //     $projects = Project::where('title', 'LIKE', '%' . $title . '%')->get();     
+    //     $data = array(
+    //         'projects' => $projects,
+    //     );
 
-        // dd($data);
-        // return view('assignusers', $data);
-    }
+    //    //dd($data);
+    //     return view('assignusers', $data);
+    // }
 
     /**
      * Show the form for editing the specified resource.

@@ -57,24 +57,6 @@ class ProjectController extends Controller
     }
 
 
-    // public function AssignUser($id)
-    // {
-
-    //     // $user = User::find(1);        
-
-    //     return view('assignusers', compact($projects));
-
-
-
-    //     // get project id from search function above (show)
-    //     // user id by clicking checkbox
-
-    //     //attach those by  attach function
-
-
-
-    // }
-    
     public function store()
     {
     
