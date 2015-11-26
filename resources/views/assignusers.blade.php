@@ -40,10 +40,10 @@ Assign users
 
               	<div class="member--checkin">
 					<div class="checkbox  assign-day-option">
-					  <label><input type="checkbox" name="day[]" class="singleday example" value="Single">Single day</label>
+					  <label><input type="checkbox" name="singleday" class="singleday example" value="Single">Single day</label>
 					</div>
 					<div class="checkbox assign-day-option">
-					  <label><input type="checkbox" name="day[]"  class="multidays example" value="multiple">Multiple days</label>
+					  <label><input type="checkbox" name="multidays"  class="multidays example" value="multiple">Multiple days</label>
 					</div>
 					<div class="singleday-date">
 						<p>Single date</p>
@@ -91,6 +91,9 @@ Assign users
 
 </form>
 @stop
+{{-- 	@section('footer')
+	@stop
+ --}}
 {{-- 	@foreach($users as $user)
 		<tr>
 			@foreach ($user->projects as $project)

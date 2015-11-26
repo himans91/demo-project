@@ -17,12 +17,46 @@
 #authorization a:hover {
     color: #777;
 }
+// #navbar{
+// position:absolute;
+// z-index: 100;
+// background:#f9f9f9;
+// width: 100%}
+
+// .navbar-collapse{
+// overflow:visible;
+// }
+
+
+
 #navbar{
 position:absolute;
 z-index: 100;
-background:#f9f9f9;
-width: 100%}
+width: 100%;
+border-bottom: 1px solid #DDDDDD;
+}
 
+.nav{
+  a{
+    color: #22333F !IMPORTANT;
+  }
+}
+
+.navbar{
+margin-bottom: 0px !IMPORTANT;
+ background-color:#FBFBFB !IMPORTANT;
+}
+
+.navbar-toggle{
+  border-color:#FBFBFB !IMPORTANT;
+    span{
+      background-color: #22333F !IMPORTANT;
+    }
+    &:hover {
+     background-color: #FBFBFB !IMPORTANT;
+   }
+}
 .navbar-collapse{
 overflow:visible;
+ background-color:#FBFBFB !IMPORTANT;
 }

@@ -7,6 +7,7 @@
 		  		<span class="icon-bar"></span>
 		  		<span class="icon-bar"></span>
 			</button>
+			<a class="navbar-brand logo-container" href="{{ url('homepage') }}"><img class="logo"  src="http://www.digitaslbi.com/Templates/assets/img/logo_digitaslbi--mobile.svg" /></a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
@@ -49,3 +50,5 @@
 		</div><!--/.nav-collapse -->
 	</div><!--/.container-fluid -->
 </nav>
+
+

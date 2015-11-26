@@ -526,7 +526,8 @@ body {
   text-rendering: optimizeLegibility;
   letter-spacing: 0.02em;
   height: 100%;
-  position: initial; }
+  position: initial;
+  color: #22333F; }
 
 .container {
   width: 960px;
@@ -785,10 +786,25 @@ tr:hover .crud_wrapper {
 #navbar {
   position: absolute;
   z-index: 100;
-  background: #f9f9f9;
-  width: 100%; }
+  width: 100%;
+  border-bottom: 1px solid #DDDDDD; }
+
+.nav a {
+  color: #22333F !IMPORTANT; }
+
+.navbar {
+  margin-bottom: 0px !IMPORTANT;
+  background-color: #FBFBFB !IMPORTANT; }
+
+.navbar-toggle {
+  border-color: #FBFBFB !IMPORTANT; }
+  .navbar-toggle span {
+    background-color: #22333F !IMPORTANT; }
+  .navbar-toggle:hover {
+    background-color: #FBFBFB !IMPORTANT; }
 
 .navbar-collapse {
-  overflow: visible; }
+  overflow: visible;
+  background-color: #FBFBFB !IMPORTANT; }
 
 /*# sourceMappingURL=style.css.map */

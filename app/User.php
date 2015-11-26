@@ -43,7 +43,9 @@ class User extends Model implements AuthenticatableContract,
     */
     public function projects()
     {
-        return $this->belongsToMany('App\Project', 'assigned_users', 'user_id', 'project_id')->withTimestamps();
+        return $this->belongsToMany('App\Project', 'assigned_users', 'user_id', 'project_id')
+        ->withPivot('singleday', 'single_date', 'multidays', 'begin_date', 'end_date')
+        ->withTimestamps();
     }
 }
 

@@ -563,21 +563,35 @@ body {
   padding: 0 1em; }
 
 body {
-  background-color: #E5E5E5;
-  color: #343434; }
+  color: #22333F; }
 
 #navbar {
   position: absolute;
   z-index: 100;
-  background: #f9f9f9;
   width: 100%;
   border-bottom: 1px solid #DDDDDD; }
 
+.logo {
+  height: 40px  !IMPORTANT;
+  margin-top: -10px; }
+
+.nav a {
+  color: #22333F !IMPORTANT; }
+
 .navbar {
-  margin-bottom: 0px; }
+  margin-bottom: 0px !IMPORTANT;
+  background-color: #FBFBFB !IMPORTANT; }
+
+.navbar-toggle {
+  border-color: #FBFBFB !IMPORTANT; }
+  .navbar-toggle span {
+    background-color: #22333F !IMPORTANT; }
+  .navbar-toggle:hover {
+    background-color: #FBFBFB !IMPORTANT; }
 
 .navbar-collapse {
-  overflow: visible; }
+  overflow: visible;
+  background-color: #FBFBFB !IMPORTANT; }
 
 .login-form {
   margin-top: 10%; }
@@ -706,18 +720,16 @@ body {
 .multidays-date {
   display: none; }
 
-/*
+.footer-container {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: #22333F;
+  color: #fff; }
 
-
-*/
-/* ==================================================================== */
-/* CHECKBOX TYPE 3 ---------------------------------------------------- */
-/* ==================================================================== */
 .footer {
-  font-size: 0.8em;
-  border-top: 1px solid #fff; }
-
-.footer--copyright_content {
-  padding: 1em 0 1.5em; }
+  min-height: 100%;
+  position: relative; }
 
 /*# sourceMappingURL=style.css.map */
