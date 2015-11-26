@@ -40,7 +40,7 @@
     @endif 
     <div class="button_wrapper clearfix">
         <div class="button_wrapper_content">
-            <input class="button" type="submit" value="Update">
+            <input class="btn btn-primary button" type="submit" value="Update">
         </div>
     </div>
 </form>

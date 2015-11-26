@@ -31,7 +31,7 @@
 		</div>
 		<div class="button_wrapper clearfix">
 			<div class="button_wrapper_content">
-				<input class="button" type="submit" value="login">
+				<input class="btn btn-primary button" type="submit" value="login">
 			</div>
 		</div>
 	</form>
