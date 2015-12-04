@@ -31,7 +31,6 @@ class CreateAssignedUsersTable extends Migration
 
             $table->timestamp('created_at'); 
             $table->timestamp('updated_at');
-
         });
     }
 

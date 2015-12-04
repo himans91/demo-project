@@ -40,9 +40,10 @@ class AuthController extends Controller {
     public function getLogin () {
         if(Auth::user()) {
             return Redirect::to("/admin/dashboard");
-        }
+        } else 
         $view = $this->user_config['views']['login'];
         return view($view);
+        
     }
 
 
@@ -61,7 +62,8 @@ class AuthController extends Controller {
             return $this->authenticated($request, Auth::user());
         }
         $url = $this->user_config['redirects']['login'];
-        return redirect()->intended($url);
+        return redirect()->intended('admin'); // ipv admin stond hier $url
+
     }
 
 

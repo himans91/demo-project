@@ -40,6 +40,8 @@ class ProjectController extends Controller
         $project = Project::findOrFail($id);    
         $project->update($request->all());
 
+        session()->flash('project_edited_message', 'Your project has been edited.');
+
         return view('homepage');
     }  
 
@@ -48,11 +50,14 @@ class ProjectController extends Controller
     {   
         $title = Input::get('title');
         $projects = Project::where('title', 'LIKE', '%' . $title . '%')->get();     
+        $currentDate = date('Y-m-d');
         //$projectuser = ProjectUser::where('title', 'LIKE', '%' . $title . '%')->get();
         $data = array(
+            'today' => $currentDate,
             'projects' => $projects,
             'users' => User::all()
         );
+        
         return view('projectresult', $data);
     }
 
@@ -69,17 +74,23 @@ class ProjectController extends Controller
         $input[''] = Carbon::now();
 
         Project::create($input);
-        session()->flash('flash_message', 'Your project has been created.');
+        session()->flash('project_created_message', 'Your project has been created.');
 
         return redirect('homepage');
     }
 
+    // public function GetProjectStatus();
+
+    //     $project = Project::all();
+
+    //     return()
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
 
 
     protected function create()

@@ -1,21 +1,27 @@
 $width:100%;
 
+html{
+  font-size:100% !IMPORTANT;
+}
 
 body{
-
+  font-size: 16px !IMPORTANT;
+  line-height: 1.2 !IMPORTANT;
   color:#22333F;
 }
 
 #navbar{
-position:absolute;
+
+position:absolute; 
 z-index: 100;
 width: 100%;
 border-bottom: 1px solid #DDDDDD;
+
 }
 
 .logo{
-    height: 40px  !IMPORTANT;
-    margin-top: -10px;
+  height: 40px  !IMPORTANT;
+  margin-top: -10px;
 }
 .nav{
   a{
@@ -35,6 +41,7 @@ border-bottom: 1px solid #DDDDDD;
     }
     &:hover {
      background-color: #FBFBFB !IMPORTANT;
+
    }
 }
 .navbar-collapse{
@@ -60,6 +67,8 @@ overflow:visible;
 .button {
   width: $width;
   height: 30px;
+
+  
 }
 
 .dropdown-menu{
@@ -72,6 +81,7 @@ overflow:visible;
   position: absolute;
   left: 0;
   right: 0;
+  padding: 0 5px 0 5px;
 }
 
 .week-selector{
@@ -225,6 +235,7 @@ overflow:visible;
 
 .multidays-date{
   display:none;
+
 }
 
 

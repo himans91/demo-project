@@ -5,8 +5,7 @@
 @stop
 @extends('layouts.navbar')
 @section('content')
-<div id="page-index" class="container">
-   <div class="content">
+   <div class="content-holder">
       <p><h4><strong>Search</strong></h4><p>
       <form class="search-form" method="post" >
          {!! csrf_field() !!} 
@@ -19,6 +18,5 @@
             <button class="btn btn-primary button" type="submit">Search</button>
          </div>
       </form>
-   </div><!--End of content-->
-</div>    <!--End of container-->
+</div>    <!--End of content-holder-->
 @stop

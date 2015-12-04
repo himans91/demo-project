@@ -39,8 +39,9 @@ $(function(){
 
 
 setTimeout(function() { 
-    $('.flashmessages').hide(3000); 
+    $('.alert').slideUp(5000); 
 });
+
 
 // $(function(){ 
 //     $('.all-users-list').hide();
@@ -114,7 +115,7 @@ $(function(){
 });
 
  $(function(){
-    $('.singleday').on('click', function(){
+    $('.singleday input[type=checkbox]').on('click', function(){
       if($(this).is(':checked')) {
         $('.singleday-date').show();
       }
@@ -125,7 +126,7 @@ $(function(){
  });
 
   $(function(){
-    $('.multidays').on('click', function(){
+    $('.multidays [type=checkbox]').on('click', function(){
       if($(this).is(':checked')) {
         $('.multidays-date').show();
       }
@@ -136,7 +137,17 @@ $(function(){
  });
 
  $(function(){
-$('.example').prop('checked', true);
-$('.example').prop('checked', false);
+$('[type=checkbox] .singleday').prop('checked', true);
+$('[type=checkbox] .multidays').prop('checked', false);
 });
 // });
+
+
+// $(function(){
+// $('.collapsed').on('click', function(){ 
+//     $('.blur-content').fadeOut('5000',function() {
+//     });
+//   }); 
+// });
+
+

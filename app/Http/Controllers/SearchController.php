@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\User;
 use App\Project;
+use App\AssignedUser;
 use DB;
 use Input;
 
@@ -44,7 +45,16 @@ class SearchController extends Controller
         $firstname = Input::get('firstname');
         $users = User::where('firstname', 'LIKE', '%' . $firstname . '%')->get();     
         //$users = User::where('surname', 'LIKE', '%' . $firstname . '%')->get();
-        $data = array('users' => $users);
+        $assignedusers = AssignedUser::all();
+        $currentDate = date('Y-m-d');
+
+        $data = array(
+            'today' => $currentDate,
+            'users' => $users,
+            'ass-users' => $assignedusers
+            );
+        // dd($data);
+
         return view('userresult', $data);
     }
 

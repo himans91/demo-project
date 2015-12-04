@@ -562,7 +562,12 @@ body {
   margin: 0 auto;
   padding: 0 1em; }
 
+html {
+  font-size: 100% !IMPORTANT; }
+
 body {
+  font-size: 16px !IMPORTANT;
+  line-height: 1.2 !IMPORTANT;
   color: #22333F; }
 
 #navbar {
@@ -616,7 +621,8 @@ body {
 .content-holder {
   position: absolute;
   left: 0;
-  right: 0; }
+  right: 0;
+  padding: 0 5px 0 5px; }
 
 .week-selector {
   margin: 0 5px 10px 5px; }

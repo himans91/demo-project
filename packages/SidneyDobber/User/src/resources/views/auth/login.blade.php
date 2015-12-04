@@ -20,13 +20,15 @@
     <!-- Form. -->
     <form class="clearfix " method="post">
         {!! csrf_field() !!}
+
+
         <div class="form_item">
             <label for="email">Email</label>
-            <input class="input-text" name="email" type="text" value="{{ Input::old('email') }}">
+            <input class="input-field" name="email" type="text" value="{{ Input::old('email') }}">
         </div>
         <div class="form_item">
             <label for="password">Password</label>
-            <input class="input-text" name="password" type="password">
+            <input class="input-field" name="password" type="password">
         </div>
         <div class="form_item">
             <label class="checkbox-label">

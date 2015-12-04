@@ -15,10 +15,10 @@
 <!-- Form. -->
 <form method="post">
     {!! csrf_field() !!}
-    <div class="form_item">
+    {{-- <div class="form_item">
         <label for="username">Username <span>(Can not be changed)</span></label>
         <input class="input-text" name="username" type="text" value="{{ Input::old('username') }}">
-    </div>
+    </div> --}}
     <div class="form_item">
         <label for="email">Email</label>
         <input class="input-text" name="email" type="text" value="{{ Input::old('email') }}">

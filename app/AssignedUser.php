@@ -27,12 +27,12 @@ class AssignedUser extends User implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['username', 'email', 'firstname', 'surname', 'password',  'tel']; // attributen die je zelf mag aanpassen
+    protected $fillable = ['singleday', 'single_date', 'multidays', 'begin_date', 'end_date']; // attributen die je zelf mag aanpassen
 
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token'];// attributen d
+    protected $hidden = [];// attributen d
 }
