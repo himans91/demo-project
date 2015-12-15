@@ -6,11 +6,11 @@
 @extends('layouts.navbar')
 @section('content')
    <div class="content-holder">
-      <p><h4><strong>Search</strong></h4><p>
+      <p>Search<p>
       <form class="search-form" method="post" >
          {!! csrf_field() !!} 
          <div class="item-search-user">
-            <label for="user">First or surname </label>
+            <label for="user">Firstname </label>
             <input class="input-field" name="firstname" type="text" placeholder="First name">
          </div>
          <div class="button-wrapper">     

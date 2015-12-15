@@ -9,6 +9,9 @@ body{
   line-height: 1.2 !IMPORTANT;
   color:#22333F;
 }
+.glyphicon-cog {
+    margin-right: 10px;
+}
 
 #navbar{
 
@@ -16,6 +19,7 @@ position:absolute;
 z-index: 100;
 width: 100%;
 border-bottom: 1px solid #DDDDDD;
+
 
 }
 
@@ -61,18 +65,30 @@ overflow:visible;
 .input-field {
   width: $width;
   height: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
+.form-control{
+  padding: 0px !IMPORTANT;
+  margin-bottom: 20px;
+}
+
+#datetimepicker{
+    width: 100% !IMPORTANT;
+    margin-bottom: 20px;
+
+}
 .button {
   width: $width;
   height: 30px;
 
-  
 }
 
 .dropdown-menu{
   width:$width;
+  a{
+    font-size: 16px;
+  }
 }
 
 /*Homepage*/
@@ -81,11 +97,11 @@ overflow:visible;
   position: absolute;
   left: 0;
   right: 0;
-  padding: 0 5px 0 5px;
+  padding: 12px 12px 0 12px;
 }
 
 .week-selector{
-  margin: 0 5px 10px 5px;
+  margin: 0 0px 20px 0px;
 }
 
 .item-project-bar{
@@ -120,6 +136,7 @@ overflow:visible;
   border-bottom: 1px solid #DDD;
   ul { 
     list-style-type: none;
+    padding: 0 0 0 30px;
   }
 }
 
@@ -154,7 +171,12 @@ overflow:visible;
   }
   ul{
     list-style-type: none;
+    padding: 0 0 0 30px;
   }
+}
+
+.media-body{
+
 }
 
 .head-of-pojects {
@@ -167,7 +189,7 @@ overflow:visible;
 
 .result-head-title {
       color:#ffffff;
-      margin-left: 41px;
+      margin-left: 30px;
   }
 
 /*Add project*/
@@ -181,9 +203,9 @@ overflow:visible;
 
 /*Assign members*/
 .assign-members{
-  background-color: #f9f9f9;
+ // background-color: #f9f9f9;
   width: 100%;
-  margin: 0px 0px 0px 5px;
+// margin: 0px 0px 0px 5px;
   border-bottom: 1px solid #dddddd;
 
 
@@ -202,8 +224,8 @@ overflow:visible;
 }
 
 .member--details{
-  padding:15px;
-  margin: 0px 0px 0px 20px;
+  padding:20px;
+  margin: 0px 0px 0px 10px;
   .CheckIn{
     visibility: hidden;
     p{
@@ -212,6 +234,16 @@ overflow:visible;
    }   
 }
 
+.member--checkin{
+
+    label{
+      margin-bottom: 10px !IMPORTANT;
+    }
+
+    input[type=radio]{
+           position: none !IMPORTANT;
+    }
+}
 
 .assign-date-option{
   display: none;
@@ -226,8 +258,12 @@ overflow:visible;
 }
 .item{
     display: inline-block;    
-
   }
+
+input[type=checkbox]{
+  width: 14px;
+  height: 14px;
+}
 
 .singleday-date{
   display:none;
@@ -235,7 +271,4 @@ overflow:visible;
 
 .multidays-date{
   display:none;
-
 }
-
-

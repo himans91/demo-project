@@ -51,7 +51,7 @@ class SearchController extends Controller
         $data = array(
             'today' => $currentDate,
             'users' => $users,
-            'ass-users' => $assignedusers
+            'assusers' => $assignedusers
             );
         // dd($data);
 

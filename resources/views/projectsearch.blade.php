@@ -6,7 +6,7 @@
 @extends('layouts.navbar')
 @section('content')
    <div class="content-holder">
-      <p><h4><strong>Search</strong></h4><p>
+      <p>Search<p>
       <form class="search-form" method="post" >
          {!! csrf_field() !!} 
          

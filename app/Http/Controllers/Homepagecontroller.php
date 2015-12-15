@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use App\Project;
 use App\User;
+use App\AssignedUser;
 
 class Homepagecontroller extends Controller
 {
@@ -16,23 +18,34 @@ class Homepagecontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $weekArray = array();
-        $currentDate = date('Y-m-d'); // Gets the date of today
-        $currentWeek = date('W'); // Gets the current weeknumber. The W will show the textual weeknumber
+        $weekArray  = array();
+        $currentDate = date('Y-m-d');                       // Gets the date of today
+        $currentWeek = date('W', strtotime('2014-12-29')
+        );                                                  // Gets the current weeknumber. The W will show the textual weeknumber
         $projects = Project::all();
         $users = User::all();
+        $assusers = AssignedUser::all();
 
-        $i = 0;                 
-        while ($i <= 51) {              //this while will loop by all 51 numbers of week
-            if($currentWeek != $i) {    // If currentweek is not equal to variable i
-                $weekArray[$i] = $i;    // Then it will store the number into the array
-            } else {                    // Else
-                $weekArray[$i] = "currentWeek"; // It will store the text currentweek into the array
+        // $from = Carbon::createFromDate(2014, 12, 29);    // 7 will be added to this date = 2015-01-05
+        // $till = Carbon::createFromDate(2015, 01, 04);    // 7 will be addes to this date = 2015-01-11
+        $i = 1;                 
+        
+        while ($i <= 52) {                                  //this while will loop by all 51 numbers of week
+            if($currentWeek != $i) {                        // If currentweek is not equal to variable i
+                // $fromdate[$i] =  $from;
+                // $tilldate[$i] = $till;
+                $weekArray[$i] = $i;                        // Then it will store the number into the array
+            } else {                                        // Else
+                $weekArray[$i] = "currentWeek";             // It will store the text currentweek into the array
             }
-             $i++;                          // After the loop the i variable will increment
+             $i++;   
+             // $from->addDay(7);
+             // $till->addDay(7);                           // After the loop the i variable will increment
         }
+
+        // dd($weekArray);
         return view('homepage')->with('userslist', $users)->with('today', $currentDate)->with('allprojects',
-         $projects)->with('currentWeek', $weekArray)->with('currentDay', date('l'));
+         $projects)->with('currentWeek', $weekArray)->with('currentDay', date('l'))->with('assignedusers', $assusers);
     }
 
     // public function getassignedusers(){

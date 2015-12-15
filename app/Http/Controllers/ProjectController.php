@@ -33,16 +33,17 @@ class ProjectController extends Controller
     }
 
 
-
     public function edit($id, Request $request)
     {
        // dd("dsad");
-        $project = Project::findOrFail($id);    
-        $project->update($request->all());
+        $project = Project::findOrFail($id);
+        $input = Request::all();
+        $project->update($input);
 
-        session()->flash('project_edited_message', 'Your project has been edited.');
+        //dd($project);
+       // session()->flash('project_edited_message', 'Your project has been edited.');
 
-        return view('homepage');
+        return redirect('homepage');
     }  
 
     //Search for project

@@ -22,7 +22,7 @@
 			  	</li>
 			  	@if(Auth::user()->userrole != 'author')
 			  	<li class="dropdown">
-	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
 	          		<ul class="dropdown-menu">
 			            <li><a href="/admin/dashboard">Dashboard</a></li>
 		                <li><a href="/admin/users">Users</a></li>
@@ -34,7 +34,7 @@
 			  	</li>
 			  	@endif
 			  	<li class="dropdown">
-			  		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search</a>
+			  		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search<span class="caret"></span></a>
 			  		<ul class="dropdown-menu">
 			            <li><a href="{{ url('search') }}">Users</a></li>
 			            <li><a href="{{ url('projectsearch') }}">Project</a></li>

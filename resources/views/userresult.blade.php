@@ -18,10 +18,16 @@
                      <ul> 
                         <li><p class="media-heading">Name: <strong>{{$user->firstname}} {{$user->surname}}</strong></p></li>
                         <li><p class="media-heading">Tel: <strong>{{$user->tel}}</strong></p></li>
-                        <li><p class="media-heading">email: <strong>{{$user->email}} </strong> </p></li>
-                    {{--     @if() --}}
-                        <li><p class="media-heading">Status: <strong></strong></p></li>
-                      {{--   @endif --}}
+                        <li><p class="media-heading">Email: <strong>{{$user->email}} </strong> </p></li>
+{{--                         @foreach ($assusers as $user ) --}}
+                          @if ($today === $user->single_date | $today > $user->begin_date && $today < $user->end_date)
+                            <li><p class="media-heading">Status: <strong>Working on{{$user->title}} </strong></p></li>
+
+                          @else
+                            <li><p class="media-heading">Status: <strong>No projects</strong></p></li>
+                          @endif
+                          <li><p class="media-heading">Locatie: <strong>{{$user->city}} </strong></p></li>
+              {{--           @endforeach --}}
                      </ul>
                   </div>
                </div><!--end of 'list-of-users'-->

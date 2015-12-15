@@ -39,7 +39,7 @@ class AuthController extends Controller {
      */
     public function getLogin () {
         if(Auth::user()) {
-            return Redirect::to("/admin/dashboard");
+            return Redirect::to("/admin/dashboard"); // redirect to homepage
         } else 
         $view = $this->user_config['views']['login'];
         return view($view);

@@ -57,7 +57,7 @@ class AssignUsersController extends Controller
 
         $user = Input::get('user');
         $singleday = Input::get('singleday');
-        $multidays = Input::get('multidays');
+        //$multidays = Input::get('multidays');
         $single_date = Input::get('single_date');
         $begin_date = Input::get('begin_date');
         $end_date = Input::get('end_date');
@@ -72,7 +72,7 @@ class AssignUsersController extends Controller
         Auth::user()->projects()->attach($project, array(
             'singleday'=> $singleday,
             'single_date' => $single_date,
-            'multidays' => $multidays,
+           // 'multidays' => $multidays,
             'begin_date'=> $begin_date,
             'end_date' => $end_date
             )); 

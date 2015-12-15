@@ -1,3 +1,4 @@
+
 #header {
     border: 1px #ccc solid;
 }
@@ -42,6 +43,11 @@ border-bottom: 1px solid #DDDDDD;
   }
 }
 
+.dropdown{
+  a{
+    font-size: 16px;
+  }
+}
 .navbar{
 margin-bottom: 0px !IMPORTANT;
  background-color:#FBFBFB !IMPORTANT;
@@ -66,3 +72,21 @@ overflow:visible;
     height: 30px;
     margin-bottom: 10px;
   }
+
+.login--logo{
+
+    margin: 20px 0px 20px 0px;
+    width: 40%;
+    /* height: 35%; */
+    position: relative;
+    /* top: 50%; */
+    left: 30%;
+  // width: 150px;
+  // height: 150px;
+  // margin-left: 75px;
+  }
+
+  .logo{
+  height: 40px  !IMPORTANT;
+  margin-top: -10px;
+}

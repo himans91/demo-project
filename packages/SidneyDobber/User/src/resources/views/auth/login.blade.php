@@ -17,11 +17,11 @@
         </ul>
     @endif
 
+    <img class="login--logo"  src="http://www.digitaslbi.com/Templates/assets/img/logo_digitaslbi--mobile.svg" />
+
     <!-- Form. -->
     <form class="clearfix " method="post">
         {!! csrf_field() !!}
-
-
         <div class="form_item">
             <label for="email">Email</label>
             <input class="input-field" name="email" type="text" value="{{ Input::old('email') }}">

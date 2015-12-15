@@ -115,10 +115,11 @@ $(function(){
 });
 
  $(function(){
-    $('.singleday input[type=checkbox]').on('click', function(){
+    $('.singleday input[type=radio]').on('click', function(){
       if($(this).is(':checked')) {
         $('.singleday-date').show();
-      }
+        $('.multidays-date').hide();
+      } 
        else  {
           $('.singleday-date').hide();
        }
@@ -126,9 +127,10 @@ $(function(){
  });
 
   $(function(){
-    $('.multidays [type=checkbox]').on('click', function(){
+    $('.multidays [type=radio]').on('click', function(){
       if($(this).is(':checked')) {
         $('.multidays-date').show();
+        $('.singleday-date').hide();
       }
        else  {
           $('.multidays-date').hide();

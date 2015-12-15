@@ -40,11 +40,12 @@ Assign users
 	                <p>Tel: <strong>{{Auth::user()->tel}}</strong></p>
 
 	              	<div class="member--checkin">
-						<div class="checkbox singleday example assign-day-option">
-						  <label><input type="checkbox" name="singleday" class="singleday" value="Single">Single day</label>
+						<div class="radio singleday example assign-day-option
+">
+						  <label><input type="radio" name="singleday" class="singleday" value="Single">Single day</label>
 						</div>
-						<div class="checkbox multidays example assign-day-option">
-						  <label><input type="checkbox" name="multidays" class="multidays" value="multiple">Multiple days</label>
+						<div class="radio multidays example assign-day-option">
+						  <label><input type="radio" name="singleday" class="multidays" value="multiple">Multiple days</label>
 						</div>
 						<div class="singleday-date">
 							<p>Single date</p>
@@ -56,14 +57,14 @@ Assign users
 			                </div>
 			            </div>
 						<div class="multidays-date assign-date-option ">
-							<p>begin date</p>
+							<p>Begin date</p>
 							<div class="input-group " id="datetimepicker">
 								<input  type="date" name="begin_date" class="form-control" />
 			                    <span class="input-group-addon">
 			                        <span class="glyphicon glyphicon-calendar"></span>
 			                    </span>
 		                    </div>
-		                    <p>end date</p>
+		                    <p>End date</p>
 							<div class="end-date input-group " id="datetimepicker">
 								<input  type="date" name="end_date" class="form-control" />
 			                    <span class="input-group-addon">

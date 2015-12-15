@@ -27,33 +27,99 @@
                @if(($today > $project->startdate) && ($today < $project->enddate))
                <div class="item-project-bar">
                   <label>{{$project->title}}</label>
-               {{--    @else
-                  <label>No projects today</label> --}}
                <div class="item-day-bar">
-                  <label>{{$currentDay}}</label>
-      {{--             <div class="item-day-bar">
-                  <label>{{$currentDay}}</label>
-                  <div class="item-day-bar">
-                  <label>{{$currentDay}}</label>
-                  <div class="item-day-bar">
-                  <label>{{$currentDay}}</label>
-                  <div class="item-day-bar">
-                  <label>{{$currentDay}}</label> --}}
+                  @if ($currentDay === "Monday")
+                     <label>{{$currentDay}}</label>
+                     @else 
+                     <label>Monday</label>
+                  @endif
                   <div class="item-user-bar">
-                     <label>User</label>
-                    <span class="glyphicon-user glyphicon-collapse-down" data-toggle="collapse" data-target=".list-of-users">
-                        @foreach($project->users as $users)
-                           <div class="list-of-users">
-                              <div class="list-entry">    
-                                 <div class="media-body entry--info">
-                                    <p class="media-heading">{{$users->firstname}}</p>
-                                    <p class="media-heading">{{$users->tel}}</p>
-                                    <p class="media-heading">{{$users->city}}</p>
-                                 </div>
-                              </div><!--End of user-->
-                           </div><!--End of user-->
-                       @endforeach 
+                  {{--    <label>User</label> --}}
+
+                  @foreach($project->users as $users)
+                     <div class="list-of-users">
+                        <div class="list-entry">    
+                     {{--    @if($today > $users->single_date && $today < $users->end_date) --}}
+                           <div class="media-body entry--info">
+                              <p class="media-heading">{{$users->firstname}}</p>
+                              <p class="media-heading">{{$users->tel}}</p>
+                              <p class="media-heading">{{$users->city}}</p>
+                           </div>
+                          {{--  @else 
+                           <p class="media-heading">No users for today</p>
+                           @endif --}}
+                        </div><!--End of user-->
+                     </div><!--End of user-->
+                 @endforeach 
                   </div><!--End of user-list-->
+                  <div class="item-day-bar">
+                     @if ($currentDay === "Tuesday")
+                        <label>{{$currentDay}}</label>
+                        @else 
+                        <label>Tuesday</label>
+                     @endif
+                     @foreach($project->users as $users)
+                        <div class="list-of-users">
+                           <div class="list-entry">    
+                              <div class="media-body entry--info">
+                                 <p class="media-heading">{{$users->firstname}}</p>
+                                 <p class="media-heading">{{$users->tel}}</p>
+                                 <p class="media-heading">{{$users->city}}</p>
+                              </div>
+                           </div><!--End of user-->
+                        </div><!--End of user-->
+                     @endforeach 
+                  <div class="item-day-bar">
+                     @if ($currentDay === "Wednesday")
+                        <label>{{$currentDay}}</label>
+                        @else 
+                        <label>Wednesday</label>
+                     @endif
+                        @foreach($project->users as $users)
+                        <div class="list-of-users">
+                           <div class="list-entry">    
+                              <div class="media-body entry--info">
+                                 <p class="media-heading">{{$users->firstname}}</p>
+                                 <p class="media-heading">{{$users->tel}}</p>
+                                 <p class="media-heading">{{$users->city}}</p>
+                              </div>
+                           </div><!--End of user-->
+                        </div><!--End of user-->
+                        @endforeach 
+                  <div class="item-day-bar">
+                     @if ($currentDay === "Thursday")
+                        <label>{{$currentDay}}</label>
+                        @else 
+                        <label>Thursday</label>
+                     @endif
+                     @foreach($project->users as $users)
+                        <div class="list-of-users">
+                           <div class="list-entry">    
+                              <div class="media-body entry--info">
+                                 <p class="media-heading">{{$users->firstname}}</p>
+                                 <p class="media-heading">{{$users->tel}}</p>
+                                 <p class="media-heading">{{$users->city}}</p>
+                              </div>
+                           </div><!--End of user-->
+                        </div><!--End of user-->
+                    @endforeach 
+                  <div class="item-day-bar">
+                     @if ($currentDay === "Friday")
+                        <label>{{$currentDay}}</label>
+                        @else 
+                        <label>Friday</label>
+                     @endif
+                     @foreach($project->users as $users)
+                        <div class="list-of-users">
+                           <div class="list-entry">    
+                              <div class="media-body entry--info">
+                                 <p class="media-heading">{{$users->firstname}}</p>
+                                 <p class="media-heading">{{$users->tel}}</p>
+                                 <p class="media-heading">{{$users->city}}</p>
+                              </div>
+                           </div><!--End of user-->
+                        </div><!--End of user-->
+                     @endforeach 
                </div> <!--End of header-users-->
             </div> <!--End of header-day-->
             @endif
