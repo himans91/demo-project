@@ -10,6 +10,7 @@ use Carbon\Carbon;
 use App\Project;
 use App\User;
 use Input;
+// use App\Http\Request\CreateProjectRequest;
 use Request;
 
 
@@ -63,8 +64,15 @@ class ProjectController extends Controller
     }
 
 
-    public function store()
+    public function store( )
     {
+        // $validate = Validator::make($request->all(),[
+        //    'title'=> 'required', 'unique'| 'max:25',
+        //      'telephone'=> 'required'| 'max:10',
+        //      'street'=> 'required',
+        //      'startdate'=> 'required|date',
+        //      'enddate' => 'required|date'
+        // ]);
     
         $input = Request::all();
 
@@ -75,9 +83,8 @@ class ProjectController extends Controller
         $input[''] = Carbon::now();
 
         Project::create($input);
-        session()->flash('project_created_message', 'Your project has been created.');
-
-        return redirect('homepage');
+        
+            return redirect('homepage');
     }
 
     // public function GetProjectStatus();

@@ -52,6 +52,7 @@ class AssignUsersController extends Controller
      */
     public function store()
     {
+
         
         $project = Input::get('project');
 

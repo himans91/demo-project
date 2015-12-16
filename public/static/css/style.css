@@ -579,6 +579,14 @@ body {
   width: 100%;
   border-bottom: 1px solid #DDDDDD; }
 
+.overflow {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  z-index: 999; }
+
 .logo {
   height: 40px  !IMPORTANT;
   margin-top: -10px; }

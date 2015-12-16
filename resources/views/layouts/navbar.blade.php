@@ -24,7 +24,7 @@
 			  	<li class="dropdown">
 	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
 	          		<ul class="dropdown-menu">
-			            <li><a href="/admin/dashboard">Dashboard</a></li>
+			           {{--  <li><a href="/admin/dashboard">Dashboard</a></li> --}}
 		                <li><a href="/admin/users">Users</a></li>
 		                <li><a href="/admin/users/add">Add user</a></li>
 	          		</ul>

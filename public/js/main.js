@@ -38,31 +38,11 @@ $(function(){
 });
 
 
-setTimeout(function() { 
-    $('.alert').slideUp(5000); 
-});
-
-
-// $(function(){ 
-//     $('.all-users-list').hide();
-//         $('.show-users-list').click(function(){
-            
-//             $('.all-users-list').show();
-//         });
+// setTimeout(function() { 
+//     $('.alert').slideUp(5000); 
 // });
 
-// // Replace the text when the checkbox is clicked
 
-// $(function(){ 
-//     $('.CheckIn').change(function() {
-//       $('.CheckboxStatus').text('Check me in for:');
-//       // $('.CheckboxStatus').css('color', 'red');
-//       if(this.checked){
-//        $(this).next().text('Im checked for:');
-//        // $('.CheckboxStatus').css('color', 'green');
-//       }
-//     });
-// });
 
 $(function(){
     $('.hideproject').click(function(){
@@ -142,14 +122,73 @@ $(function(){
 $('[type=checkbox] .singleday').prop('checked', true);
 $('[type=checkbox] .multidays').prop('checked', false);
 });
-// });
-
 
 // $(function(){
-// $('.collapsed').on('click', function(){ 
-//     $('.blur-content').fadeOut('5000',function() {
-//     });
-//   }); 
+// $('input.startdate').datepicker({
+//     minDate: 0  
+// });
 // });
 
 
+// $('.navbar-toggle').on('click', function(){ 
+//     $('.overflow').hide()
+//    // $('.overflow').css({opacity: 0.5});
+// });
+// $('.navbar-toggle').on('click', function(){ 
+//     $('.overflow').show()
+// //    $('.overflow').css({opacity: 0});
+// });
+
+
+// $(document).ready(function() {
+//     $('#AddProductForm').formValidation({
+//         framework: 'bootstrap',
+//         icon: {
+//             valid: 'glyphicon glyphicon-ok',
+//             invalid: 'glyphicon glyphicon-remove',
+//             validating: 'glyphicon glyphicon-refresh'
+//         },
+//         fields: {
+//             title: {
+//                 validators: {
+//                     notEmpty: {
+//                         message: 'The title is required'
+//                     },
+//                     stringLength: {
+//                         min: 3,
+//                         max: 30,
+//                         message: 'The name must be more than 3 and less than 30 characters long'
+//                     },
+//                     regexp: {
+//                         regexp: /^[a-zA-Z0-9_]+$/,
+//                         message: 'The name can only consist of alphabetical, number and underscore'
+//                     }
+//                 }
+//             },
+//             price: {
+//                 validators: {
+//                     notEmpty: {
+//                         message: 'The price is required'
+//                     },
+//                     numeric: {
+//                         message: 'The price must be a number'
+//                     }
+//                 }
+//             },
+//             'size[]': {
+//                 validators: {
+//                     notEmpty: {
+//                         message: 'The size is required'
+//                     }
+//                 }
+//             },
+//             availability: {
+//                 validators: {
+//                     notEmpty: {
+//                         message: 'The availability option is required'
+//                     }
+//                 }
+//             }
+//         }
+//     });
+// });

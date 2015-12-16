@@ -5,7 +5,7 @@
 @stop
 @extends('layouts.navbar')
 @section('content') 
-   <div class="blur-content">
+   <div class="overflow">
       @if (Session::has('project_created_message'))      
          <div class="alert alert-success">{{ Session::get('project_created_message') }}</div>
       @endif
@@ -41,9 +41,8 @@
                         <div class="list-entry">    
                      {{--    @if($today > $users->single_date && $today < $users->end_date) --}}
                            <div class="media-body entry--info">
-                              <p class="media-heading">{{$users->firstname}}</p>
+                              <p class="media-heading">{{$users->firstname}} {{$users->surname}} </p>
                               <p class="media-heading">{{$users->tel}}</p>
-                              <p class="media-heading">{{$users->city}}</p>
                            </div>
                           {{--  @else 
                            <p class="media-heading">No users for today</p>

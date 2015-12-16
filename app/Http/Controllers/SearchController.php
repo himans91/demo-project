@@ -53,8 +53,7 @@ class SearchController extends Controller
             'users' => $users,
             'assusers' => $assignedusers
             );
-        // dd($data);
-
+        
         return view('userresult', $data);
     }
 
