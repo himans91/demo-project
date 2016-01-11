@@ -5,6 +5,10 @@
 @import "susy";
 @import "../../node_modules/normalize-scss/normalize";
 
+/*
+// = require _susy
+// = require _../../node_modules/normalize-scss/normalize
+*/
 
 // --------------------------------------------------
 //  Configurations.
@@ -15,17 +19,25 @@
 @import "configurations/settings";
 @import "configurations/site-properties";
 
-
+/*
+//= require _configurations/mixins
+//= require _configurations/base
+//= require _configurations/settings
+//= require _configurations/site-properties
+*/
 // --------------------------------------------------
 //  Generics.
 // --------------------------------------------------
 
 @import "generics/typography";
 @import "generics/generics";
-
-
+/*
+//= require _generics/typography
+//= require _generics/generics
+*/
 // --------------------------------------------------
 //  Components.
 // --------------------------------------------------
 
 @import "components/header";
+/*//= require _components/header*/

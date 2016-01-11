@@ -6,7 +6,8 @@
 @extends('layouts.navbar')
 @section('content')
    <div class="content-holder">
-      <p>Search<p>
+      <img class="find-icons"  src="http://s21.postimg.org/tb3kga65z/findunicorn.png" />
+{{--       <p>Search for unicorns<p> --}}
       <form class="search-form" method="post" >
          {!! csrf_field() !!} 
          <div class="item-search-user">

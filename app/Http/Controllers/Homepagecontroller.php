@@ -20,7 +20,7 @@ class Homepagecontroller extends Controller
     public function index(){
         $weekArray  = array();
         $currentDate = date('Y-m-d');                       // Gets the date of today
-        $currentWeek = date('W', strtotime('2014-12-29')
+        $currentWeek = date('W', strtotime('2016-01-04')
         );                                                  // Gets the current weeknumber. The W will show the textual weeknumber
         $projects = Project::all();
         $users = User::all();

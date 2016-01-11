@@ -131,8 +131,8 @@ $('[type=checkbox] .multidays').prop('checked', false);
 
 
 // $('.navbar-toggle').on('click', function(){ 
-//     $('.overflow').hide()
-//    // $('.overflow').css({opacity: 0.5});
+//     //$('.overflow').hide()
+//     $('.overflow').css({filter: breeze});
 // });
 // $('.navbar-toggle').on('click', function(){ 
 //     $('.overflow').show()

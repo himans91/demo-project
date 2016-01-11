@@ -26,7 +26,8 @@
                             <li><p class="media-heading">Status: <strong>No projects</strong></p></li>
                           @endif --}}
                         @endforeach
-                        <li><p class="media-heading">Locatie: <strong>{{$user->city}} </strong></p></li>
+                        <li><p class="media-heading">Status: <strong>{{$user->title}} </strong></p></li>     
+                        <li><p class="media-heading">Locatie: <strong>{{$user->city}} </strong></p></li>     
                      </ul>
                   </div>
                </div><!--end of 'list-of-users'-->

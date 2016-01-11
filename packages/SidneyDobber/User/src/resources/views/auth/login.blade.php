@@ -23,11 +23,11 @@
     <form class="clearfix " method="post">
         {!! csrf_field() !!}
         <div class="form_item">
-            <label for="email">Email</label>
-            <input class="input-field" name="email" type="text"  required value="{{ Input::old('email') }}">
+            <label for="email">Email *</label>
+            <input class="input-field"  name="email" type="text"  required value="{{ Input::old('email') }}">
         </div>
         <div class="form_item">
-            <label for="password">Password</label>
+            <label for="password">Password *</label>
             <input class="input-field" name="password" type="password" required >
         </div>
         <div class="form_item">

@@ -7,7 +7,7 @@ Project search result
 
 <div class="content-holder">
    @if($projects->isEmpty())
-      <div class="alert alert-danger" role="alert">Nothing found!<a href="{{ url('assignusers') }}"> Try Again</a></div>
+      <div class="alert alert-danger" role="alert">Nothing found!<a href="{{ url('projectsearch') }}"> Try Again</a></div>
    @else 
       {!! csrf_field() !!}
       <div class="head-of-pojects">

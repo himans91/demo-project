@@ -43,6 +43,7 @@
                            <div class="media-body entry--info">
                               <p class="media-heading">{{$users->firstname}} {{$users->surname}} </p>
                               <p class="media-heading">{{$users->tel}}</p>
+                               <p class="media-heading">{{$users->city}}</p>
                            </div>
                           {{--  @else 
                            <p class="media-heading">No users for today</p>
@@ -61,7 +62,7 @@
                         <div class="list-of-users">
                            <div class="list-entry">    
                               <div class="media-body entry--info">
-                                 <p class="media-heading">{{$users->firstname}}</p>
+                                 <p class="media-heading">{{$users->firstname}} {{$users->surname}}</p>
                                  <p class="media-heading">{{$users->tel}}</p>
                                  <p class="media-heading">{{$users->city}}</p>
                               </div>
@@ -78,7 +79,7 @@
                         <div class="list-of-users">
                            <div class="list-entry">    
                               <div class="media-body entry--info">
-                                 <p class="media-heading">{{$users->firstname}}</p>
+                                 <p class="media-heading">{{$users->firstname}} {{$users->surname}}</p>
                                  <p class="media-heading">{{$users->tel}}</p>
                                  <p class="media-heading">{{$users->city}}</p>
                               </div>
@@ -95,7 +96,7 @@
                         <div class="list-of-users">
                            <div class="list-entry">    
                               <div class="media-body entry--info">
-                                 <p class="media-heading">{{$users->firstname}}</p>
+                                 <p class="media-heading">{{$users->firstname}} {{$users->surname}}</p>
                                  <p class="media-heading">{{$users->tel}}</p>
                                  <p class="media-heading">{{$users->city}}</p>
                               </div>
@@ -112,7 +113,7 @@
                         <div class="list-of-users">
                            <div class="list-entry">    
                               <div class="media-body entry--info">
-                                 <p class="media-heading">{{$users->firstname}}</p>
+                                 <p class="media-heading">{{$users->firstname}} {{$users->surname}}</p>
                                  <p class="media-heading">{{$users->tel}}</p>
                                  <p class="media-heading">{{$users->city}}</p>
                               </div>

@@ -8,7 +8,10 @@ body{
   font-size: 16px !IMPORTANT;
   line-height: 1.2 !IMPORTANT;
   color:#22333F;
+  //background: url("http://s8.postimg.org/61a1awp4l/background_image.jpg");
+  background-color: rgba(243, 243, 243, 0.55) !IMPORTANT;
 }
+
 .glyphicon-cog {
     margin-right: 10px;
 }
@@ -48,7 +51,7 @@ border-bottom: 1px solid #DDDDDD;
 .navbar-toggle{
   border-color:#FBFBFB !IMPORTANT;
     span{
-      background-color: #22333F !IMPORTANT;
+      background-color: #ED1C27 !IMPORTANT;
     }
     &:hover {
      background-color: #FBFBFB !IMPORTANT;
@@ -88,7 +91,10 @@ overflow:visible;
 .button {
   width: $width;
   height: 30px;
-
+  border-radius: 0px !IMPORTANT;
+  // background-image: linear-gradient(to bottom,#ED1C27 0,#AF1212 100%) !IMPORTANT;
+  // background-color: #ED1C27 !IMPORTANT;
+  // border-color: #ED1C27 !IMPORTANT;
 }
 
 .dropdown-menu{
@@ -123,8 +129,9 @@ overflow:visible;
 
 .item-day-bar{
     width: $width;
-    box-shadow: inset 0px 0px 5px 0px #B8B9B6;
-    background-color: #FDFDFD;
+   // box-shadow: inset 0px 0px 5px 0px #B8B9B6;
+    background-color: #FFFFFF;
+    border-top: 5px solid #D2D2D2;;
 }
 
 .item-user-bar{
@@ -139,7 +146,7 @@ overflow:visible;
 
   //background-color: #6fa8dc;
   // box-shadow: 0px 3px 8px 0px;
-  background-color: #71a2b8;
+ background-color: #98BCCC;
   border-bottom: 1px solid #DDD;
   ul { 
     list-style-type: none;
@@ -278,4 +285,11 @@ input[type=checkbox]{
 
 .multidays-date{
   display:none;
+}
+
+.find-icons{
+     position: relative;
+    width: 50%;
+    left: 25%;
+    margin-bottom: 2em;
 }

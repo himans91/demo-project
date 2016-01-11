@@ -482,6 +482,10 @@ td,
 th {
   padding: 0; }
 
+/*
+// = require _susy
+// = require _../../node_modules/normalize-scss/normalize
+*/
 html {
   box-sizing: border-box; }
 
@@ -527,7 +531,8 @@ body {
   letter-spacing: 0.02em;
   height: 100%;
   position: initial;
-  color: #22333F; }
+  color: #22333F;
+  background-color: rgba(243, 243, 243, 0.55) !important; }
 
 .container {
   width: 960px;
@@ -610,6 +615,12 @@ body {
 .del-or-edit {
   visibility: visible; }
 
+/*
+//= require _configurations/mixins
+//= require _configurations/base
+//= require _configurations/settings
+//= require _configurations/site-properties
+*/
 h1, h2, h3, h4, h5, h6, p, span {
   margin: 0;
   line-height: 1.8em; }
@@ -675,7 +686,8 @@ select {
 
 .button {
   width: 100%;
-  height: 30px; }
+  height: 30px;
+  border-radius: 0px !IMPORTANT; }
 
 .button:hover {
   cursor: pointer; }
@@ -757,6 +769,10 @@ tr:hover .crud_wrapper {
 .sidebar__navigation {
   list-style: none; }
 
+/*
+//= require _generics/typography
+//= require _generics/generics
+*/
 #header {
   border: 1px #ccc solid; }
 
@@ -795,7 +811,7 @@ tr:hover .crud_wrapper {
 .navbar-toggle {
   border-color: #FBFBFB !IMPORTANT; }
   .navbar-toggle span {
-    background-color: #22333F !IMPORTANT; }
+    background-color: #ED1C27 !IMPORTANT; }
   .navbar-toggle:hover {
     background-color: #FBFBFB !IMPORTANT; }
 
@@ -818,6 +834,9 @@ tr:hover .crud_wrapper {
 
 .logo {
   height: 40px  !IMPORTANT;
-  margin-top: -10px; }
+  margin-top: -10px;
+  padding: 5px; }
+
+/*//= require _components/header*/
 
 /*# sourceMappingURL=style.css.map */
