@@ -20,8 +20,7 @@ class Homepagecontroller extends Controller
     public function index(){
         $weekArray  = array();
         $currentDate = date('Y-m-d');                       // Gets the date of today
-        $currentWeek = date('W', strtotime('2016-01-04')
-        );                                                  // Gets the current weeknumber. The W will show the textual weeknumber
+        $currentWeek = date('W', strtotime('2016-01-04'));                                                  // Gets the current weeknumber. The W will show the textual weeknumber
         $projects = Project::all();
         $users = User::all();
         $assusers = AssignedUser::all();
@@ -42,6 +41,11 @@ class Homepagecontroller extends Controller
              // $from->addDay(7);
              // $till->addDay(7);                           // After the loop the i variable will increment
         }
+
+        // list($day,$month,$year) = explode('/','04/01/2016');
+        // $weekNumber = date('W',mktime(0,0,0,$month,$day,$year));
+
+        // dd($weekNumber);
 
         // dd($weekArray);
         return view('homepage')->with('userslist', $users)->with('today', $currentDate)->with('allprojects',

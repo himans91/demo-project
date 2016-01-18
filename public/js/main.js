@@ -122,7 +122,6 @@ $(function(){
 $('[type=checkbox] .singleday').prop('checked', true);
 $('[type=checkbox] .multidays').prop('checked', false);
 });
-
 // $(function(){
 // $('input.startdate').datepicker({
 //     minDate: 0  

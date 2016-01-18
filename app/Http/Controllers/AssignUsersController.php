@@ -20,7 +20,8 @@ class AssignUsersController extends Controller
     public function index()
     {
         $currentDate = date('Y-m-d'); // Gets the date of today
-        $project = Project::all();
+        //$project = Project::all();
+        $project = Project::where('enddate', '>', date('Y-m-d'))->get();  
         $user = Auth::user();
 
         $data = array(
