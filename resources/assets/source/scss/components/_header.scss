@@ -162,7 +162,6 @@ overflow:visible;
   }
 }
 
-
 /*Search page*/
 .item-search-project{
 
@@ -271,7 +270,8 @@ overflow:visible;
     display: none;
 }
 .item{
-    display: inline-block;    
+    display: inline-block;  
+    width: 100%;  
   }
 
 input[type=checkbox]{
